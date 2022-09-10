@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: repeating-linear-gradient(to left,#d2b48c, #d2b2b48c);
+    background-color: #d2b48c;
     text-align: center;
     color: black;
 }
