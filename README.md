@@ -1,2 +1,4 @@
-# dylanravel.com
-the source code for my website
+# Welcome to dylanravel.com
+Website in Progress!
+
+- Dylan Ravel
