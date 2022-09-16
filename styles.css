@@ -102,6 +102,23 @@ html.is-animating .transition-fade {
     cursor: pointer;
 }
 
+.featured-game img{
+    cursor: pointer;
+}
+
+.code-icon img {
+    cursor: not-allowed;
+}
+
+.social-media img:hover{
+    filter: brightness(0%);
+}
+
+.corner-icons img:hover{
+    filter: brightness(0%);
+}
+
+
 button:hover {
     color: rgb(94, 94, 94);
 }
