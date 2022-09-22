@@ -10,6 +10,8 @@
     "typed-query-selector": "^2.7.0"
   },
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
