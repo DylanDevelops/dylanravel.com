@@ -1,5 +1,25 @@
 {
+  "name": "dylanravel.com",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio website",
+  "main": "script.js",
   "dependencies": {
-    "swup": "^2.0.19"
-  }
+    "delegate-it": "^3.0.1",
+    "opencollective-postinstall": "^2.0.3",
+    "swup": "^2.0.19",
+    "typed-query-selector": "^2.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DylanDevelops/dylanravel.com.git"
+  },
+  "author": "Dylan Ravel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DylanDevelops/dylanravel.com/issues"
+  },
+  "homepage": "https://github.com/DylanDevelops/dylanravel.com#readme"
 }
