@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/DylanDevelops/dylanravel.com/issues"
   },
-  "homepage": "https://github.com/DylanDevelops/dylanravel.com#readme"
+  "homepage": "https://github.com/DylanDevelops/dylanravel.com#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
 }
