@@ -45,6 +45,16 @@ html.is-animating .transition-fade {
     top: 40px;
 }
 
+.easter-egg {
+    width: 25px;
+    position: fixed;
+    left: 40px;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0%;
+}
+
 .setting-icon {
     width: 25px;
     position: absolute;
