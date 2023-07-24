@@ -69,6 +69,7 @@ body {
     padding-top: 20px;
     flex: 1;
     z-index: 2;
+    max-height: 800px;
 }
 
 .card-content {
@@ -171,6 +172,7 @@ footer {
     justify-content: center;
     gap: 20px;
     overflow-y: auto;
+    overflow-x: hidden;
     max-height: 440px; /* Set the maximum height to enable scrolling */
     padding: 1px;
     position: relative;
@@ -188,6 +190,15 @@ footer {
     transition: transform 0.2s ease;
     position: relative;
     z-index: 1;
+    margin: 0 10px 0 10px;
+}
+
+.project-card:first-of-type {
+    margin: 10px 10px 0 10px;
+}
+
+.project-card:last-of-type {
+    margin: 0 10px 10px 10px;
 }
 
 .project-card:hover {
@@ -208,7 +219,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding-left: 10px; /* Add some space between the image and text */
-    align-items: flex-start;
+    align-items: center;
 }
 
 .project-card h2 {
@@ -219,5 +230,12 @@ footer {
 .project-card p {
     font-size: 14px;
     margin-top: 5px;
-    text-align: left;
+    text-align: center;
+}
+
+.view-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
