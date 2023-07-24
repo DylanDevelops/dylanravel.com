@@ -186,7 +186,7 @@ footer {
     border: 3px solid #222;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background: rgb(231, 231, 231);
+    background: rgb(231, 231, 231); /* change this to white maybe later */
     transition: transform 0.2s ease;
     position: relative;
     z-index: 1;
@@ -238,4 +238,18 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
+}
+
+.view-details {
+    color: #222;
+    padding: 3px;
+}
+
+.view-details:hover {
+    background-color: #222;
+    padding: 3px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
 }
