@@ -163,6 +163,8 @@ footer {
 
 /* PROJECT PAGE */
 .project-container {
+    max-width: 440px;
+    height: 440px;
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -171,15 +173,26 @@ footer {
     overflow-y: auto;
     max-height: 440px; /* Set the maximum height to enable scrolling */
     padding: 1px;
+    position: relative;
+    z-index: 1;
 }
 
 .project-card {
     width: 440px;
     display: flex; /* Add display: flex to the project card */
     padding: 10px;
-    border: 1px solid #222;
+    border: 3px solid #222;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgb(231, 231, 231);
+    transition: transform 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    z-index: 2;
 }
 
 .project-card img {
@@ -187,6 +200,7 @@ footer {
     height: 100%; /* Set the image height to take up the full height of the card */
     object-fit: cover;
     border-radius: 8px;
+    border: 2px solid black;
 }
 
 .project-details {
