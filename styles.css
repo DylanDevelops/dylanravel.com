@@ -164,6 +164,7 @@ footer {
 /* PROJECT PAGE */
 .project-container {
     margin-top: 20px;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -174,25 +175,35 @@ footer {
 
 .project-card {
     width: 440px;
+    display: flex; /* Add display: flex to the project card */
     padding: 10px;
     border: 1px solid #222;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 .project-card img {
-    width: 100%;
-    height: 150px;
+    width: 150px; /* Set the width of the image */
+    height: 100%; /* Set the image height to take up the full height of the card */
     object-fit: cover;
     border-radius: 8px;
 }
 
+.project-details {
+    flex: 1; /* Let the project details take the remaining space */
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px; /* Add some space between the image and text */
+    align-items: flex-start;
+}
+
 .project-card h2 {
     margin-top: 10px;
+    text-align: center;
 }
 
 .project-card p {
     font-size: 14px;
     margin-top: 5px;
+    text-align: left;
 }
