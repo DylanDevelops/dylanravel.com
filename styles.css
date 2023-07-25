@@ -212,6 +212,32 @@ h3 {
     background-color: #3e3e3e;
 }
 
+.about-me-section {
+    justify-content: center;
+    background: white;
+    margin-top: 10px;
+    height: 278px;
+    border-radius: 10px;
+    border: #222 3px solid;
+}
+
+.about-section-header {
+    margin-top: 10px;
+}
+
+.certification-link {
+    color: #222;
+}
+
+.certification-link:hover {
+    color: #3c3c3c;
+    text-decoration: dotted underline 2px;
+}
+
+.b {
+    font-weight: bold;
+}
+
 footer {
     background-color: #006286;
     padding: 10px;
