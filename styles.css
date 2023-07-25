@@ -349,3 +349,71 @@ footer {
     color: #fff;
     cursor: pointer;
 }
+
+
+/* BLOG PAGE */
+
+
+
+/* CONTACT PAGE */
+.contact-section {
+    max-height: 400px;
+    overflow-y: auto;
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    border: #222 3px solid;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #222;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group button {
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-group button:hover {
+    background-color: #3c3c3c;
+}
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+}
