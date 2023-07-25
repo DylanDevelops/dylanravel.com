@@ -25,7 +25,7 @@ body {
 .ocean { 
     height: 25%;
     width: 100%;
-    position:absolute;
+    position: absolute;
     bottom:0;
     left:0;
     background: #015871;
@@ -358,7 +358,7 @@ footer {
 
 /* CONTACT PAGE */
 .contact-section {
-    max-height: 400px;
+    max-height: 450px;
     overflow-y: auto;
     background: rgb(231, 231, 231);
     border-radius: 10px;
@@ -379,6 +379,11 @@ footer {
 
 .form-group {
     margin-bottom: 20px;
+}
+
+.form-group label::after {
+    content: ' *';
+    color: red;
 }
 
 .form-group label {
