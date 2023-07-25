@@ -21,78 +21,88 @@
     <meta property="og:type" content='website'/>
 
     <link rel="stylesheet" href="/styles.css">
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-    <link rel="manifest" href="/site.webmanifest?v=2">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicon.ico?v=2">
-    <meta name="msapplication-TileColor" content="#2b5797">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=2">
+    <link rel="manifest" href="/favicon/site.webmanifest?v=2">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=2" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=2">
+    <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="/node_modules/swup/dist/swup.js"></script>
+    <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
-    <title>Dylan Ravel - Portfolio</title>
+    <script src="/homepage.js"></script>
+    <title>Dylan Ravel - Home</title>
 </head>
 <body>
-    <main id="swup" class="transition-fade">
-        <div class="container">
-            <div class="qr-code">
-                
-            </div>
+    <div class="card">
+        <div class="card-content">
             <div class="profile-box">
-                <div class="corner-icons">
-                    <div class="featured-game">
-                        <a href="https://sleepydogstudios.net/#games" target="_blank">
-                            <img src="/Images/controller.png" alt="View Featured Game" class="game-icon">
-                        </a>
-                    </div>
-                    <div class="code-icon">
-                        <img src="/Images/code.png" alt="Code" class="setting-icon">
-                    </div>
-                </div>
-                <img src="./Images/Me_NEW.jpg" alt="Profile Picture" class="profile-pic">
-                <div class="waving-hand">
-                    <h3>&#128075</h3>
-                </div>
-                <h3>Hey, I'm Dylan Ravel</h3>
-                <p>Programmer and Game Developer in Denver, Colorado <br> currently working for <a href="https://www.sleepydogstudios.net/" target="_blank" class="project-links">Sleepy Dog Studios</a>.</p>
-                <p><br>Feel free to visit any of my socials linked below:</p>
-                <div class="social-media">
-                    <a href="https://www.github.com/dylandevelops" target="_blank">
-                        <img src="./Images/Icons/github.png" alt="Github" class="social-media-icon" >
-                    </a>
-                    <a href="https://dylandevs.itch.io" target="_blank">
-                        <img src="./Images/Icons/itchio.png" alt="Itch.io" class="social-media-icon">
-                    </a>
-                    <a href="https://www.twitter.com/dylandev_" target="_blank">
-                        <img src="./Images/Icons/twitter.png" alt="Twitter" class="social-media-icon">
-                    </a>
-                    <a href="https://www.youtube.com/itzdylanlive" target="_blank">
-                        <img src="./Images/Icons/youtube.png" alt="YouTube" class="social-media-icon">
-                    </a>
-                    <a href="https://www.instagram.com/dylan.ravel" target="_blank">
-                        <img src="./Images/Icons/instagram.png" alt="instagram" class="social-media-icon">
-                    </a>
-                </div>
-                <a href="mailto:dylanm.ravel@gmail.com">
-                    <button type="button">Contact</button>
-                </a>
-                <div class="profile-bottom">
-                    <p>Learn More About Me!</p>
-                    <a href="/about">
-                        <img src="./Images/arrow.png" alt="Learn More">
-                    </a>
+                <img class="profile-pic" id="profile-pic" src="Assets/Images/pfp.webp" alt="A Picture of Dylan Ravel" />
+                <h1>Dylan Ravel</h1>
+                <h3>Programmer • Game Developer • Chipotle Enthusiast</h3>
+                <div class="socials-list">
+                    <ul>
+                        <li><a class="social-icon" href="https://www.github.com/DylanDevelops" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a class="social-icon" href="https://www.linkedin.com/in/dylanravel/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a class="social-icon" href="https://www.linkedin.com/in/dylanravel/" target="_blank"><i class="fa-brands fa-itch-io"></i></a></li>
+                        <li><a class="social-icon" href="https://www.twitter.com/DylanDev_" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a class="social-icon" href="https://www.instagram.com/dylan.ravel" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a class="social-icon" href="https://www.youtube.com/@DylanDev" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                        <!-- Add more social media icons here with their respective href -->
+                    </ul>
                 </div>
             </div>
-            <div class="easter-egg">
-                <a href="./Images/teehee.jpg" target="_blank">
-                    <img src="/Images/star.png"class="easter-egg">
-                </a>
+            <nav>
+                <button class="nav-button-selected"><i class="fa-solid fa-house"></i> Home</button>
+                <button onclick="clickNavPage('/projects');" class="nav-button"><i class="fa-solid fa-box-archive"></i> Projects</button>
+                <button onclick="clickNavPage('https://blog.dylanravel.com');" class="nav-button"><i class="fa-solid fa-newspaper"></i> Blog</button>
+                <button onclick="clickNavPage('/contact');" class="nav-button"><i class="fa-solid fa-envelope"></i> Contact</button>
+            </nav>
+            <div class="about-me-section">
+                <section>
+                    <h2 class="about-section-header">About:</h2>
+                    <h5>
+                        I'm a game developer and programmer based out of <br> Denver, Colorado working on many different projects! <br> Thank you for checking out my website!
+                    </h5>
+                </section>
+                <section>
+                    <h2 class="about-section-header">Skills:</h2>
+                    <h5>
+                        [ Game Development ]
+                        [ Web Development ]
+                        <br>
+                        [ Creative ]
+                        [ Programming ]
+                        [ C# ]
+                        [ HTML ]
+                        [ CSS ]
+                        <br>
+                        [ Javascript ]
+                        [ Unity ]
+                        [ Unreal Engine ]
+                        [ Blender ]
+                        [ Git ]
+                    </h5>
+                </section>
+                <section>
+                    <h2 class="about-section-header">Certifications:</h2>
+                    <h5>
+                        [ <a class="certification-link" href="https://www.freecodecamp.org/certification/dylandev/responsive-web-design" target="_blank">Responsive Web Design</a> ]
+                    </h5>
+                </section>
             </div>
         </div>
-    </main>  
+        <footer>
+            <p>© 2023 Dylan Ravel — <a class="all-rights-reserved" href="./privacy-policy">All rights reserved</a>.</p>
+        </footer>
+    </div>
+    <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
 </body>
 </html>
