@@ -34,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
+    <script src="/homepage.js"></script>
     <title>Dylan Ravel - Home</title>
 </head>
 <body>
@@ -41,31 +42,6 @@
         <div class="card-content">
             <div class="profile-box">
                 <img class="profile-pic" id="profile-pic" src="Assets/Images/pfp.webp" alt="A Picture of Dylan Ravel" />
-
-                <script>
-                    // Get the profile picture element
-                    const profilePic = document.getElementById('profile-pic');
-
-                    // Function to handle the animation end event
-                    function onAnimationEnd() {
-                        profilePic.classList.remove('spinning');
-                        profilePic.removeEventListener('animationend', onAnimationEnd);
-                    }
-
-                    // Function to toggle the spinning animation
-                    function toggleSpin() {
-                        if (!profilePic.classList.contains('spinning')) {
-                            profilePic.classList.add('spinning');
-                            // Add animationend event listener to reset the spinning state
-                            profilePic.addEventListener('animationend', onAnimationEnd);
-                        }
-                    }
-
-                    // Event listener to trigger the spinning animation on click
-                    profilePic.addEventListener('click', toggleSpin);
-
-                </script>
-
                 <h1>Dylan Ravel</h1>
                 <h3>Programmer • Game Developer • Chipotle Enthusiast</h3>
                 <div class="socials-list">

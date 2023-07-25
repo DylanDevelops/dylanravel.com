@@ -112,6 +112,10 @@ body {
     animation: zoomInOut 2s ease-in-out;
 }
 
+.profile-pic.bouncing {
+    animation: bounce 1s ease-in-out;
+}
+
 @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -128,7 +132,16 @@ body {
     50% {
       transform: scale(1.2);
     }
- }
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+}
 
 h3 {
     font-size: 15px;
