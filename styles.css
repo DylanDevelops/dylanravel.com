@@ -78,7 +78,8 @@ body {
 }
 
 .card-content {
-    background-color: #71beb2;
+    background: linear-gradient(145deg, #71beb2 40%, #4cb2c4);
+    /* background-color: #71beb2; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
