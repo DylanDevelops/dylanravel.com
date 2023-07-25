@@ -40,9 +40,44 @@
     <div class="card">
         <div class="card-content">
             <div class="profile-box">
-                <img class="profile-pic" src="Assets/Images/pfp.webp" alt="A Picture of Dylan Ravel" />
+                <img class="profile-pic" id="profile-pic" src="Assets/Images/pfp.webp" alt="A Picture of Dylan Ravel" />
+
+                <script>
+                    // Get the profile picture element
+                    const profilePic = document.getElementById('profile-pic');
+
+                    // Function to handle the animation end event
+                    function onAnimationEnd() {
+                        profilePic.classList.remove('spinning');
+                        profilePic.removeEventListener('animationend', onAnimationEnd);
+                    }
+
+                    // Function to toggle the spinning animation
+                    function toggleSpin() {
+                        if (!profilePic.classList.contains('spinning')) {
+                            profilePic.classList.add('spinning');
+                            // Add animationend event listener to reset the spinning state
+                            profilePic.addEventListener('animationend', onAnimationEnd);
+                        }
+                    }
+
+                    // Event listener to trigger the spinning animation on click
+                    profilePic.addEventListener('click', toggleSpin);
+
+                </script>
+
                 <h1>Dylan Ravel</h1>
                 <h3>Programmer • Game Developer • Chipotle Enthusiast</h3>
+                <div class="socials-list">
+                    <ul>
+                        <li><a class="social-icon" href="https://www.github.com/DylanDevelops" target="_blank"><i class="fab fab fa-github-square"></i></a></li>
+                        <li><a class="social-icon" href="https://www.linkedin.com/in/dylanravel/" target="_blank"><i class="fab fab fa-linkedin"></i></a></li>
+                        <li><a class="social-icon" href="https://www.twitter.com/DylanDev_" target="_blank"><i class="fab fab fa-twitter-square"></i></a></li>
+                        <li><a class="social-icon" href="https://www.instagram.com/dylan.ravel" target="_blank"><i class="fab fab fa-instagram-square"></i></a></li>
+                        <li><a class="social-icon" href="https://www.youtube.com/@DylanDev" target="_blank"><i class="fab fab fab fa-youtube-square"></i></a></li>
+                        <!-- Add more social media icons here with their respective href -->
+                    </ul>
+                </div>
             </div>
             <nav>
                 <button onclick="clickNavPage('/');" class="nav-button-selected"><i class="fa-solid fa-house"></i> Home</button>

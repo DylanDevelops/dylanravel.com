@@ -1,3 +1,8 @@
+::selection {
+    background: #006286;
+    color: white;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -85,8 +90,11 @@ body {
 }
 
 .profile-box i {
-    font-size: 50px;
     margin-bottom: 10px;
+}
+
+.page-icon {
+    font-size: 50px;
 }
 
 .profile-pic {
@@ -96,9 +104,58 @@ body {
     box-shadow: black 0 0 10px;
 }
 
+.profile-pic.spinning {
+    animation: spin 2s linear 1;
+}
+
+.profile-pic.zooming {
+    animation: zoomInOut 2s ease-in-out;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+ }
+
 h3 {
     font-size: 15px;
     margin-bottom: 10px;
+}
+
+.socials-list ul {
+    list-style: none;
+}
+
+.socials-list li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.socials-list a {
+    text-decoration: none;
+    color: #222;
+    font-size: 25px;
+    transition: transform 0.1s ease;
+}
+
+.socials-list a:hover {
+    cursor: pointer;
+    color: #3c3c3c;
 }
 
 .nav-button {
@@ -111,7 +168,6 @@ h3 {
     box-shadow: #222 5px 5px 2px;
     margin: 3px;
     border: #222 1px solid;
-
     transition: transform 0.1s ease;
 }
 
