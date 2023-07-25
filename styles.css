@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;    
 }
 
 html, body { 
@@ -216,7 +217,7 @@ h3 {
     justify-content: center;
     background: white;
     margin-top: 10px;
-    height: 278px;
+    height: 320px;
     border-radius: 10px;
     border: #222 3px solid;
 }
