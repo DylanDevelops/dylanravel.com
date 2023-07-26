@@ -101,6 +101,7 @@ body {
 
 .profile-pic {
     width: 150px;
+    height: 100%;
     border-radius: 50%;
     border: black 5px solid;
     box-shadow: black 0 0 10px;
