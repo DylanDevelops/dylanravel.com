@@ -1,0 +1,10 @@
+{
+  "name": "dylanravel.com",
+  "version": "1.0.0",
+  "description": "My portfolio website",
+  "author": "Dylan Ravel",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
