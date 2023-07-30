@@ -19,7 +19,7 @@ body {
     display: flex;
     min-height: 100vh;
     background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #68f7ff 100%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .ocean { 
@@ -78,14 +78,17 @@ body {
     max-height: 800px;
 }
 
+.card span {
+    white-space: nowrap;
+}
+
 .card-content {
     background: linear-gradient(145deg, #71beb2 40%, #4cb2c4);
     /* background-color: #71beb2; */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     flex: 1;
     padding: 20px;
     border: #222 3px solid;
@@ -217,7 +220,9 @@ h3 {
     justify-content: center;
     background: white;
     margin-top: 10px;
-    height: 320px;
+    /* height: 320px; */
+    max-width: 500px;
+    padding: 5px;
     border-radius: 10px;
     border: #222 3px solid;
 }
@@ -262,7 +267,7 @@ footer {
 /* PROJECT PAGE */
 .project-container {
     max-width: 440px;
-    height: 440px;
+    /* height: 440px; */
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -277,7 +282,7 @@ footer {
 }
 
 .project-card {
-    width: 440px;
+    max-width: 440px;
     display: flex; /* Add display: flex to the project card */
     padding: 10px;
     border: 3px solid #222;
@@ -304,7 +309,8 @@ footer {
 }
 
 .project-card img {
-    width: 150px; /* Set the width of the image */
+    max-width: 150px; /* Set the width of the image */
+    width: 30%;
     height: 100%; /* Set the image height to take up the full height of the card */
     object-fit: cover;
     border-radius: 8px;
