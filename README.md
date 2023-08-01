@@ -13,3 +13,6 @@ Please create an [issue](https://github.com/DylanDevelops/dylanravel.com/issues/
 
 # Contributions
 This project is open source so that others can update it if they would like to. If there is a feature you implement, please create a pull request **targeting the `main` branch**. Submit the pull request when you are done making changes and I will either approve, deny, or request changes.
+
+# Special Thanks
+- [@kwertyops](https://github.com/kwertyops) - Helping clean up some code and fix some formatting issues
