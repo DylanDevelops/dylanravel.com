@@ -526,4 +526,8 @@ footer {
 .g-recaptcha {
     display: flex;
     justify-content: center;
+    /*
+    transform: scale(0.7);
+    transform-origin: 0 0;
+    */
 }
