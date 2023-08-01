@@ -226,7 +226,6 @@ h3 {
     padding: 10px;
     border-radius: 10px;
     border: #222 3px solid;
-    
 }
 
 .about-section-header {
@@ -252,7 +251,7 @@ footer {
     text-align: center;
     border-radius: 10px;
     z-index: 3;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
 }
 
 .all-rights-reserved {
@@ -263,6 +262,10 @@ footer {
 .all-rights-reserved:hover {
     color: white;
     text-decoration: underline;
+}
+
+.mobile-footer-margin {
+    display: none;
 }
 
 /* If on smaller device */
@@ -309,6 +312,26 @@ footer {
         margin: 3px;
         border: white 1px solid;
         transform: none;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+    .mobile-footer-margin {
+        display: block;
+        height: 10px;
+    }
+}
+
+@media screen and (max-height: 790px) {
+    footer {
+        margin-bottom: 0;
+    }
+
+    .mobile-footer-margin {
+        display: block;
+        height: 10px;
     }
 }
 
@@ -439,6 +462,7 @@ footer {
 /* CONTACT PAGE */
 .contact-section {
     max-height: 450px;
+    max-width: 440px;
     overflow-y: auto;
     background: rgb(231, 231, 231);
     border-radius: 10px;
