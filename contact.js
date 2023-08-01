@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const recaptchaElement = document.querySelector('.g-recaptcha');
+
+    function updateRecaptchaSize() {
+        if(window.innerWidth <= 530) {
+            recaptchaElement.setAttribute('data-size','compact');
+        } else {
+            recaptchaElement.setAttribute('data-size','normal');
+        }
+
+        grecaptcha.render();
+    }
+
+    // calling the function on page load
+    updateRecaptchaSize();
+
     const submitButton = document.getElementById('submitBtn');
     const contactForm = document.getElementById('contactForm');
 
