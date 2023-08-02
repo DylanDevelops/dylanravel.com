@@ -11,8 +11,9 @@
     scroll-behavior: smooth;    
 }
 
-html, body { 
+html, body {
     height: 100%; 
+    scroll-behavior: smooth;
 }
 
 body {
@@ -380,9 +381,15 @@ footer {
     z-index: 2;
 }
 
-.project-card img {
-    max-width: 150px; /* Set the width of the image */
+.project-card .blur-load {
     width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card .blur-load img {
+    max-width: 100%; /* Set the width of the image */
     height: 100%; /* Set the image height to take up the full height of the card */
     object-fit: cover;
     border-radius: 8px;
@@ -441,7 +448,14 @@ footer {
         z-index: 2;
     }
 
-    .project-card img {
+    .project-card .blur-load {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-card .blur-load img {
         width: 100%;
         height: 200px;
         object-fit: cover;
