@@ -165,15 +165,25 @@ h3 {
 }
 
 .socials-list a {
+    margin-top: 3px;
+    display: inline-block;
     text-decoration: none;
-    color: #222;
     font-size: 25px;
-    transition: transform 0.1s ease;
 }
 
 .socials-list a:hover {
     cursor: pointer;
     color: #3c3c3c;
+}
+
+.social-icon-img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.1s ease;
+}
+
+.social-icon:hover .social-icon-img {
+    fill: #3c3c3c;
 }
 
 .nav-button {
