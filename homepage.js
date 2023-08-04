@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const profilePic = document.getElementById('profile-pic');
 
     // Function to handle the animation end event
-    function onAnimationEnd(event) {
+    function onAnimationEnd() {
         profilePic.classList.remove('spinning', 'zooming', 'bouncing');
         profilePic.removeEventListener('animationend', onAnimationEnd);
     }
