@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             recaptchaElement.setAttribute('data-size','normal');
         }
-
-        grecaptcha.render();
     }
 
     // calling the function on page load
