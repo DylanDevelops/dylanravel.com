@@ -12,9 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:title" content="Dylan Ravel - Portfolio"/>
+    <meta property="og:title" content="Dylan Ravel - Home"/>
     <meta property="og:image" content="https://i.ibb.co/Zg4hdst/Website-Social-Image.jpg"/>
-    <meta property="og:description" content="Welcome to my personal portfolio!"/>
+    <meta property="og:description" content="Welcome to my personal portfolio website!"/>
     <meta property="og:url" content="https://www.dylanravel.com"/>
     <meta property='og:image:width' content='1024' />
     <meta property='og:image:height' content='1024' />
@@ -33,8 +33,14 @@
     <meta name="msapplication-TileColor" content="#9f00a7">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
+
+    <script async src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
+    
     <script src="./script.js"></script>
     <script src="./homepage.js"></script>
     <title>Dylan Ravel - Home</title>
@@ -43,7 +49,7 @@
     <div class="card">
         <div class="card-content">
             <div class="profile-box">
-                <img class="profile-pic" id="profile-pic" src="Assets/Images/pfp.webp" alt="A Picture of Dylan Ravel" width="150px" height="100%" />
+                <img class="profile-pic" id="profile-pic" src="Assets/Images/pfp.webp" fetchpriority="high" alt="A Picture of Dylan Ravel" width="150px" height="150px" />
                 <h1>Dylan Ravel</h1>
                 <h3>Programmer • Game Developer • University Student</h3>
                 <div class="socials-list">

@@ -91,7 +91,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     margin: 20px;
     flex: 1;
-    padding: 20px;
     border: #222 3px solid;
 }
 
@@ -374,15 +373,15 @@ footer {
     transition: transform 0.2s ease;
     position: relative;
     z-index: 1;
-    margin: 0 10px 0 10px;
+    margin: 0 10px;
 }
 
 .project-card:first-of-type {
-    margin: 6px 10px 0 10px;
+    margin: 6px 10px 0;
 }
 
 .project-card:last-of-type {
-    margin: 0 10px 6px 10px;
+    margin: 0 10px 6px;
 }
 
 .project-card:hover {
