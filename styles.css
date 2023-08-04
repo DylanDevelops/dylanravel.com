@@ -23,6 +23,20 @@ body {
     overflow-x: hidden;
 }
 
+.blur-load {
+    background-size: cover;
+    background-position: center;
+}
+
+.blur-load.loaded {
+    opacity: 1;
+}
+
+.blur-load > img {
+    opacity: 0;
+    transition: 200ms ease-in-out;
+}
+
 .ocean { 
     height: 25%;
     width: 100%;
@@ -392,6 +406,7 @@ footer {
     max-width: 100%; /* Set the width of the image */
     height: 100%; /* Set the image height to take up the full height of the card */
     object-fit: cover;
+    object-position: center;
     border-radius: 8px;
     border: 2px solid black;
 }
