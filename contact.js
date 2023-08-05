@@ -16,7 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.getElementById('submitBtn');
     const contactForm = document.getElementById('contactForm');
 
-    submitButton.addEventListener('click', function(event) {
+    // check if the device is mobile
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // define the event type based on the device type
+    const eventType = isMobile ? 'touchstart' : 'click';
+
+    submitButton.addEventListener(eventType, function(event) {
         event.preventDefault();
 
         const name = document.getElementById('name').value;
