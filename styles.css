@@ -530,3 +530,29 @@ footer {
     transform-origin: 0 0;
     */
 }
+
+
+
+/* 404 PAGE */
+.quote-section {
+    max-height: 450px;
+    max-width: 440px;
+    overflow-y: auto;
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    border: #222 3px solid;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.dad-joke-container {
+    height: 500px;
+}
+
+blockquote::before {
+    content: "\" ";
+}
+
+blockquote::after {
+    content: " \"";
+}
