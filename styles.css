@@ -335,7 +335,7 @@ footer {
 }
 
 
-/* PROJECT PAGE */
+/* PROJECTS PAGE */
 .project-container {
     max-width: 440px;
     /* height: 440px; */
@@ -536,7 +536,7 @@ footer {
 /* 404 PAGE */
 .quote-section {
     max-height: 450px;
-    max-width: 440px;
+    max-width: 440px; /* max width is 440px */
     overflow-y: auto;
     background: rgb(231, 231, 231);
     border-radius: 10px;
@@ -546,13 +546,24 @@ footer {
 }
 
 .dad-joke-container {
-    height: 500px;
+    height: 100px;
+}
+
+blockquote {
+    padding-top: 10px;
+    font-style: italic;
 }
 
 blockquote::before {
     content: "\" ";
+    color: #222;
+    font-style: bold;
+    font-size: 25px;
 }
 
 blockquote::after {
     content: " \"";
+    color: #222;
+    font-style: bold;
+    font-size: 25px;
 }
