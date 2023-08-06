@@ -44,6 +44,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="./script.js"></script>
     <script src="./dadjoke.js"></script>
+    <script src="./tic-tac-toe.js"></script>
     <title>Dylan Ravel - 404</title>
 </head>
 <body>
@@ -63,12 +64,26 @@
             <section class="quote-section">
                 <h1>Dad Joke Generator:</h1>
                 <div class="dad-joke-container">
-                  <blockquote class="joke"></blockquote>
+                    <blockquote class="joke"></blockquote>
                 </div>
             </section>
-            <section>
-              <h3 class="Tic-tac-toe-title">While you get back on track, play a game!</h3>
-              <img src="" />
+            <section> 
+                <h3 class="Tic-tac-toe-title">While you get back on track, play a game!</h3>
+                <div class="board" id="board">
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                    <div class="cell" data-cell></div>
+                </div>
+                <div class="winning-message" id="winningMessage">
+                    <div id="winningMessageText"></div>
+                    <button id="restartButton">Restart</button>
+                </div>
             </section>
         </div>
         <footer>

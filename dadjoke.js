@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
             jokeText.textContent = result[0].joke;
         },
         error: function ajaxError(jqXHR) {
-            console.error('Error: ', jqXHR.responseText);
+            console.error('Error getting dad joke: ', jqXHR.responseText);
             jokeText.textContent = "Why don't crabs give to charity? Because they are shellfish!";
         }
     });
