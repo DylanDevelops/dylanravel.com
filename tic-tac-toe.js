@@ -36,18 +36,46 @@ document.addEventListener('DOMContentLoaded', () => {
         winningMessageElement.classList.remove('show');
     }
 
+    function computerPlay() {
+        const emptyCells = [...cellElements].filter(cell => !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS));
+        const randomIndex = Math.floor(Math.random() * emptyCells.length);
+        const selectedCell = emptyCells[randomIndex];
+
+        setTimeout(() => {
+            placeMark(selectedCell, PLAYER_O_CLASS);
+
+            if(checkWin(PLAYER_O_CLASS)) {
+                endGame(false);
+            } else if(isDraw()) {
+                endGame(true);
+            } else {
+                swapTurns();
+                setBoardHoverClass();
+            }
+        }, Math.random() * 500 + 600);
+    }
+
     function handleCellClick(e) {
         const cell = e.target;
-        const currentClass = isPlayer_O_Turn ? PLAYER_O_CLASS : PLAYER_X_CLASS;
-
-        placeMark(cell, currentClass);
-        if(checkWin(currentClass)) {
-            endGame(false);
-        } else if(isDraw()) {
-            endGame(true);
-        } else {
-            swapTurns();
-            setBoardHoverClass();
+        if (!isPlayer_O_Turn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
+            const currentClass = PLAYER_X_CLASS;
+            
+            placeMark(cell, currentClass);
+            if (checkWin(currentClass)) {
+                endGame(false);
+            } else if (isDraw()) {
+                endGame(true);
+            } else {
+                swapTurns();
+                setBoardHoverClass();
+        
+                if (isPlayer_O_Turn) {
+                    computerPlay();
+                }
+            }
+        } else if (isPlayer_O_Turn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
+            // Allow clicking on a square during AI's turn without affecting future turns
+            placeMark(cell, PLAYER_X_CLASS);
         }
     }
 
@@ -77,9 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function setBoardHoverClass() {
         boardElement.classList.remove(PLAYER_X_CLASS);
         boardElement.classList.remove(PLAYER_O_CLASS);
-        if(isPlayer_O_Turn) {
-            boardElement.classList.add(PLAYER_O_CLASS);
-        } else {
+        if (!isPlayer_O_Turn) {
             boardElement.classList.add(PLAYER_X_CLASS);
         }
     }
