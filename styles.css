@@ -537,9 +537,9 @@ footer {
 :root {
     --cell-size: 50px;
 
-    --color: #81c3fd; /* for hover */
-    --color-set: #0275d8; /* when set */
-    --1: 10px; /* X line-width */
+    --color: #3e3e3e; /* for hover */
+    --color-set: #000000; /* when set */
+    --l: 10px; /* X line-width */
 }
 
 .quote-section {
@@ -581,14 +581,15 @@ blockquote::after {
 }
 
 .board {
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 163px;
     display: grid;
     justify-content: center;
     align-content: center;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, auto);
+    margin: 0 auto;
 }
 
 .cell {
@@ -649,4 +650,33 @@ blockquote::after {
 /* for circle (set) */
 .cell:not(.x).circle {
 	background: radial-gradient(var(--color-set) 60%, transparent 60%);
+}
+
+.winning-message {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	color: #222;
+	font-size: 1.5rem;
+	flex-direction: column;
+}
+
+.winning-message button {
+    margin-top: 10px;
+	border-radius: 10px;
+	font-size: 1rem;
+	background-color: white;
+	border: 1px solid var(--color-set);
+	padding: .25em .5em;
+	cursor: pointer;
+}
+
+.winning-message button:hover {
+	background-color: #222;
+	color: white;
+	border-color: white;
+}
+
+.winning-message.show {
+    display: flex;
 }

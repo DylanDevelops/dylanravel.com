@@ -1,4 +1,4 @@
-// game comes from this article -> https://www.codebrainer.com/blog/tic-tac-toe-javascript-game
+// * game comes from this article -> https://www.codebrainer.com/blog/tic-tac-toe-javascript-game
 
 document.addEventListener('DOMContentLoaded', () => {
     const PLAYER_X_CLASS = 'x';
