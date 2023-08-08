@@ -576,6 +576,10 @@ blockquote::after {
     font-size: 25px;
 }
 
+.tic-tac-toe-title {
+    margin-top: 10px;
+}
+
 .board {
     width: 100px;
     height: 100px;
