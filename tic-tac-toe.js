@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartButton = document.getElementById('restartButton');
     const winningMessageTextElement = document.getElementById('winningMessageText');
     const boardOverlay = document.getElementById('overlay');
-    const scribbleSound = document.getElementById('scribbleAudio');;
+    const scribbleSound = document.getElementById('scribbleAudio');
 
     let isPlayerTurn = true;
 
