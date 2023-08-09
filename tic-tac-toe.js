@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const winningMessageElement = document.getElementById('winningMessage');
     const restartButton = document.getElementById('restartButton');
     const winningMessageTextElement = document.getElementById('winningMessageText');
+    const boardOverlay = document.getElementById('overlay');
     let isPlayerTurn = true;
 
     startGame();
@@ -36,6 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function computerPlay() {
         isPlayerTurn = false;
+
+        boardOverlay.style.display = 'block';
+
         const emptyCells = [...cellElements].filter(cell => !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS));
         const randomIndex = Math.floor(Math.random() * emptyCells.length);
         const selectedCell = emptyCells[randomIndex];
@@ -51,11 +55,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 isPlayerTurn = true;
                 setBoardHoverClass();
             }
+            
+            boardOverlay.style.display = 'none';
         }, Math.random() * 500 + 600);
     }
 
     function handleCellClick(e) {
         const cell = e.target;
+
+        if (!isPlayerTurn || cell.classList.contains(PLAYER_X_CLASS) || cell.classList.contains(PLAYER_O_CLASS)) {
+            // If it's not the player's turn or the cell is already marked, return early
+            return;
+        }
+
         if (isPlayerTurn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
             const currentClass = PLAYER_X_CLASS;
             
@@ -78,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             if(isPlayerTurn) {
                 winningMessageTextElement.innerText = 'You win!';
-                startConfetti();
             } else {
                 winningMessageTextElement.innerText = 'The computer wins!';
             }
@@ -97,11 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setBoardHoverClass() {
-        boardElement.classList.remove(PLAYER_X_CLASS);
-        boardElement.classList.remove(PLAYER_O_CLASS);
         if (isPlayerTurn) {
+            boardElement.classList.remove(PLAYER_X_CLASS);
+            boardElement.classList.remove(PLAYER_O_CLASS);
             boardElement.classList.add(PLAYER_X_CLASS);
         } else {
+            boardElement.classList.remove(PLAYER_X_CLASS);
+            boardElement.classList.remove(PLAYER_O_CLASS);
             boardElement.classList.add(PLAYER_O_CLASS);
         }
     }
@@ -112,26 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 return cellElements[index].classList.contains(currentClass);
             })
         })
-    }
-
-    // Initialize confetti-js
-    const confettiSettings = {
-        target: 'confetti-canvas', // Set to 'body' to make confetti fall from the whole screen
-        max: '150',
-        size: '1',
-        animate: true,
-        start_from_edge: false, // Set to false to make confetti fall from a fixed position
-        props: ['circle', 'square', 'triangle', 'line'],
-        colors: [[255, 165, 0], [255, 0, 0], [255, 255, 0], [0, 255, 0]]
-    };
-
-    function startConfetti() {
-        const confetti = new ConfettiGenerator(confettiSettings);
-        confetti.render();
-    
-        // Stop confetti after a few seconds
-        setTimeout(() => {
-            confetti.clear();
-        }, 5000); // Adjust the duration as needed
     }
 });

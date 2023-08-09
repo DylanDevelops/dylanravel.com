@@ -602,6 +602,17 @@ blockquote::after {
     margin: 0 auto;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust the background color and opacity as needed */
+    z-index: 3; /* Set a higher z-index than the grid */
+    display: none; /* Initially hide the overlay */
+    cursor: not-allowed;
+}
+
 .cell {
     width: var(--cell-size);
     height: var(--cell-size);
