@@ -1,5 +1,3 @@
-// * game comes from this article -> https://www.codebrainer.com/blog/tic-tac-toe-javascript-game
-
 document.addEventListener('DOMContentLoaded', () => {
     const PLAYER_X_CLASS = 'x';
     const PLAYER_O_CLASS = 'circle';
@@ -18,14 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const winningMessageElement = document.getElementById('winningMessage');
     const restartButton = document.getElementById('restartButton');
     const winningMessageTextElement = document.getElementById('winningMessageText');
-    let isPlayer_O_Turn = false;
+    let isPlayerTurn = true;
 
     startGame();
 
     restartButton.addEventListener('click', startGame);
 
     function startGame() {
-        isPlayer_O_Turn = false;
+        isPlayerTurn = true;
         cellElements.forEach(cell => {
             cell.classList.remove(PLAYER_X_CLASS);
             cell.classList.remove(PLAYER_O_CLASS);
@@ -37,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function computerPlay() {
+        isPlayerTurn = false;
         const emptyCells = [...cellElements].filter(cell => !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS));
         const randomIndex = Math.floor(Math.random() * emptyCells.length);
         const selectedCell = emptyCells[randomIndex];
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if(isDraw()) {
                 endGame(true);
             } else {
-                swapTurns();
+                isPlayerTurn = true;
                 setBoardHoverClass();
             }
         }, Math.random() * 500 + 600);
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleCellClick(e) {
         const cell = e.target;
-        if (!isPlayer_O_Turn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
+        if (isPlayerTurn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
             const currentClass = PLAYER_X_CLASS;
             
             placeMark(cell, currentClass);
@@ -66,16 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (isDraw()) {
                 endGame(true);
             } else {
-                swapTurns();
+                isPlayerTurn = false;
                 setBoardHoverClass();
-        
-                if (isPlayer_O_Turn) {
-                    computerPlay();
-                }
+                computerPlay();
             }
-        } else if (isPlayer_O_Turn && !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS)) {
-            // Allow clicking on a square during AI's turn without affecting future turns
-            placeMark(cell, PLAYER_X_CLASS);
         }
     }
 
@@ -83,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(draw) {
             winningMessageTextElement.innerText = "It's a draw!";
         } else {
-            winningMessageTextElement.innerText = `Player with ${isPlayer_O_Turn ? "O's" : "X's"} wins!`;
+            winningMessageTextElement.innerText = `Player with ${isPlayerTurn ? "X's" : "O's"} wins!`;
         }
         winningMessageElement.classList.add('show');
     }
@@ -98,15 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.classList.add(currentClass);
     }
 
-    function swapTurns() {
-        isPlayer_O_Turn = !isPlayer_O_Turn;
-    }
-
     function setBoardHoverClass() {
         boardElement.classList.remove(PLAYER_X_CLASS);
         boardElement.classList.remove(PLAYER_O_CLASS);
-        if (!isPlayer_O_Turn) {
+        if (isPlayerTurn) {
             boardElement.classList.add(PLAYER_X_CLASS);
+        } else {
+            boardElement.classList.add(PLAYER_O_CLASS);
         }
     }
 
