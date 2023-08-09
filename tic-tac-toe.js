@@ -76,7 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if(draw) {
             winningMessageTextElement.innerText = "It's a draw!";
         } else {
-            winningMessageTextElement.innerText = `Player with ${isPlayerTurn ? "X's" : "O's"} wins!`;
+            if(isPlayerTurn) {
+                winningMessageTextElement.innerText = 'You win!';
+                startConfetti();
+            } else {
+                winningMessageTextElement.innerText = 'The computer wins!';
+            }
         }
         winningMessageElement.classList.add('show');
     }
@@ -107,5 +112,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 return cellElements[index].classList.contains(currentClass);
             })
         })
+    }
+
+    // Initialize confetti-js
+    const confettiSettings = {
+        target: 'confetti-canvas', // Set to 'body' to make confetti fall from the whole screen
+        max: '150',
+        size: '1',
+        animate: true,
+        start_from_edge: false, // Set to false to make confetti fall from a fixed position
+        props: ['circle', 'square', 'triangle', 'line'],
+        colors: [[255, 165, 0], [255, 0, 0], [255, 255, 0], [0, 255, 0]]
+    };
+
+    function startConfetti() {
+        const confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    
+        // Stop confetti after a few seconds
+        setTimeout(() => {
+            confetti.clear();
+        }, 5000); // Adjust the duration as needed
     }
 });

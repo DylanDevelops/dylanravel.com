@@ -41,6 +41,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script async src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="./script.js"></script>
     <script src="./dadjoke.js"></script>
@@ -82,7 +84,7 @@
                 </div>
                 <div class="winning-message" id="winningMessage">
                     <div id="winningMessageText"></div>
-                    <button id="restartButton">Restart</button>
+                    <button id="restartButton"><i class="fa-solid fa-rotate-right"></i> Restart</button>
                 </div>
             </section>
         </div>
@@ -94,6 +96,9 @@
     <div class="ocean">
         <div class="wave"></div>
         <div class="wave"></div>
+    </div>
+    <div class="content-wrapper">
+        <canvas id="confetti-canvas"></canvas>
     </div>
 </body>
 </html>
