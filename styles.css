@@ -684,6 +684,7 @@ blockquote::after {
 }
 
 .winning-message button {
+    color: #222;
     margin-top: 10px;
 	border-radius: 10px;
 	font-size: 1rem;
