@@ -694,9 +694,17 @@ blockquote::after {
 	cursor: pointer;
 }
 
+#restartButton {
+    color: #222;
+}
+
+#restartButton:hover {
+    color: #fff;
+}
+
 .winning-message button:hover {
 	background-color: #222;
-	color: white;
+    color: #fff;
 	border-color: white;
 }
 
