@@ -2,7 +2,7 @@
 
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fwww.dylanravel.com)](https://www.dylanravel.com/) [![pages-build-deployment](https://github.com/DylanDevelops/dylanravel.com/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/DylanDevelops/dylanravel.com/actions/workflows/pages/pages-build-deployment) [![CodeFactor](https://www.codefactor.io/repository/github/dylandevelops/dylanravel.com/badge)](https://www.codefactor.io/repository/github/dylandevelops/dylanravel.com)
 
-<img src="https://github.com/DylanDevelops/dylanravel.com/assets/48571264/df62a738-b862-4570-b3bf-25eb11bac778" width="600" />
+<img width="600" alt="Website Screenshot" src="https://github.com/DylanDevelops/dylanravel.com/assets/48571264/1edaf826-9574-40b9-8298-bc790f18f298">
 
 # What is this?
 This is the official codebase for dylanravel.com. All the files are also hosted on here. 
