@@ -175,6 +175,76 @@ h3 {
     color: #3c3c3c;
 }
 
+/* header tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.tooltip::before, .tooltip::after {
+    position: absolute;
+    content: '';
+    transition: all 0.4s ease;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    background: transparent;
+    font-size: 50px;
+    font-weight: 300;
+    top: -75px;
+    left: 50%;
+    transform: translate(-50%, 20px); /* Center the content */
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    display: none;
+}
+
+.tooltip:hover::before, .tooltip:hover::after {
+    transform: translate(-50%, -2px);
+    opacity: 1;
+    display: block;
+}
+
+/* skill popouts */
+.skill-popout {
+    position: relative;
+    display: inline-block;
+    cursor: default;
+}
+
+.skill-popout::before, .skill-popout::after {
+    position: absolute;
+    content: '';
+    transition: all 0.4s ease;
+}
+
+.skill-popout::after {
+    content: attr(data-tooltip);
+    background: transparent;
+    font-size: 20px;
+    font-weight: 300;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%, 20px); /* Center the content */
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    opacity: 0;
+    display: none;
+}
+
+.skill-popout:hover::before, .skill-popout:hover::after {
+    transform: translate(-50%, -2px);
+    opacity: 1;
+    display: block;
+}
+
 .nav-button {
     width: 100px;
     height: 30px;
