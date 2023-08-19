@@ -215,6 +215,14 @@ h3 {
     position: relative;
     display: inline-block;
     cursor: default;
+    background: #d1d1d1;
+    border-radius: 25px;
+    padding: 6px;
+    margin: 2px;
+}
+
+.skill-popout:hover {
+    background: #b7b7b7;
 }
 
 .skill-popout::before, .skill-popout::after {
