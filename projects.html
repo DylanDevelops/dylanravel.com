@@ -41,6 +41,7 @@
     <script async src="https://kit.fontawesome.com/5792883fb8.js" crossorigin="anonymous"></script>
     
     <script src="/script.js"></script>
+    <script src="/image-modal.js"></script>
     <title>Dylan Ravel - Projects</title>
 </head>
 <body>
@@ -59,7 +60,7 @@
             </nav>
             <div class="project-container">
                 <div class="project-card">
-                    <img src="./Assets/Images/projects/the-obsessive-shadow.webp" alt="The Obsessive Shadow" />
+                    <img class="project-image" src="./Assets/Images/projects/the-obsessive-shadow.webp" alt="The Obsessive Shadow" />
                     <div class="project-details">
                         <h2 id="the-obsessive-shadow">The Obsessive Shadow</h2>
                         <p>
@@ -71,7 +72,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="./Assets/Images/projects/notion-to-outlook-logo.webp" alt="Notion To Outlook" />
+                    <img class="project-image" src="./Assets/Images/projects/notion-to-outlook-logo.webp" alt="Notion To Outlook" />
                     <div class="project-details">
                         <h2 id="notion-to-outlook">Notion To Outlook</h2>
                         <p>
@@ -83,7 +84,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="./Assets/Images/projects/whats-the-weather.webp" alt="What's The Weather?" />
+                    <img class="project-image" src="./Assets/Images/projects/whats-the-weather.webp" alt="What's The Weather?" />
                     <div class="project-details">
                         <h2 id="whats-the-weather">What's the Weather?</h2>
                         <p>
@@ -95,7 +96,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="./Assets/Images/projects/choose-your-own-dylan.webp" alt="Choose Your Own Dylan" />
+                    <img class="project-image" src="./Assets/Images/projects/choose-your-own-dylan.webp" alt="Choose Your Own Dylan" />
                     <div class="project-details">
                         <h2 id="choose-your-own-dylan">Choose Your Own Dylan</h2>
                         <p>
@@ -112,6 +113,13 @@
             <p>© 2023 Dylan Ravel — <a class="all-rights-reserved" href="./privacy-policy">All rights reserved</a>.</p>
         </footer>
         <div class="mobile-footer-margin">&nbsp;</div>
+        <div id="modal-popout" class="modal">
+            <span class="close" id="modal-close-button">&times;</span>
+
+            <img class="modal-content" id="modal-image" />
+
+            <div id="caption"></div>
+        </div>
     </div>
     <div class="ocean">
         <div class="wave"></div>
