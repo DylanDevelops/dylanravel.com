@@ -329,15 +329,17 @@ footer {
     border-radius: 10px;
     z-index: 3;
     margin-bottom: 10px;
+    color: rgb(235, 235, 235);
 }
 
 .all-rights-reserved {
     text-decoration: none;
-    color: rgb(38, 38, 38);
+    color: rgb(208, 208, 208);
+    /* color: rgb(38, 38, 38); */
 }
 
 .all-rights-reserved:hover {
-    color: white;
+    color: rgb(182, 182, 182);
     text-decoration: underline;
 }
 
