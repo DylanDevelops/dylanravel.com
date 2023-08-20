@@ -341,8 +341,8 @@ footer {
     text-decoration: underline;
 }
 
-.mobile-footer-margin {
-    display: none;
+.footer-margin {
+    display: block;
 }
 
 /* If on smaller device */
@@ -393,11 +393,6 @@ footer {
 
     footer {
         margin-bottom: 0;
-    }
-
-    .mobile-footer-margin {
-        display: block;
-        height: 10px;
     }
 }
 
