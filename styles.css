@@ -182,6 +182,13 @@ h3 {
     cursor: default;
 }
 
+.tooltip:hover {
+    background: linear-gradient(to right, #222,
+                    #ff6b08, #cf23cf, #222);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 .tooltip::before, .tooltip::after {
     position: absolute;
     content: '';
