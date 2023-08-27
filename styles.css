@@ -866,11 +866,11 @@ blockquote::after {
     display: flex;
 }
 
-
-/* REDIRECTS */
+/* REDIRECT PAGES */ 
+/*
 .redirect-group {
     display: flex;
-    flex-direction: column; /* Change the flex direction to column */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -893,6 +893,7 @@ blockquote::after {
     text-decoration: underline;
     color: #222;
 }
+*/
 
 .redirect-link:hover {
     color: #3c3c3c;
