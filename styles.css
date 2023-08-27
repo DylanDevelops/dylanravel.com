@@ -187,6 +187,7 @@ h3 {
                     #ff6b08, #cf23cf, #222);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .tooltip::before, .tooltip::after {
@@ -611,11 +612,6 @@ footer {
     }   
 }
 
-
-/* BLOG PAGE */
-
-
-
 /* CONTACT PAGE */
 .contact-section {
     max-height: 450px;
@@ -868,4 +864,36 @@ blockquote::after {
 
 .winning-message.show {
     display: flex;
+}
+
+
+/* REDIRECTS */
+.redirect-group {
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 10px;
+    z-index: 999;
+    margin: 30px
+}
+
+.loading-spinner {
+    font-size: 70px;
+}
+
+.redirect-link {
+    text-decoration: underline;
+    color: #222;
+}
+
+.redirect-link:hover {
+    color: #3c3c3c;
 }

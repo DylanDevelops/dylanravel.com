@@ -20,6 +20,8 @@
     <meta property='og:image:height' content='1024' />
     <meta property="og:type" content='website'/>
 
+    <meta http-equiv="Refresh" content="0; url='https://blog.dylanravel.com'" />
+
     <link rel="stylesheet" href="./styles.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png?v=2">
@@ -43,23 +45,9 @@
     <title>Dylan Ravel - Blog</title>
 </head>
 <body>
-    <div class="card">
-        <div class="card-content">
-            <div class="profile-box">
-                <i class="page-icon fa-solid fa-newspaper"></i>
-                <h1>Blog</h1>
-                <h3>Read posts that I write about various topics.</h3>
-            </div>
-            <nav>
-                <button onclick="clickNavPage('/');" class="nav-button"><i class="fa-solid fa-house"></i> Home</button>
-                <button onclick="clickNavPage('/projects');" class="nav-button"><i class="fa-solid fa-box-archive"></i> Projects</button>
-                <button class="nav-button-selected"><i class="fa-solid fa-newspaper"></i> Blog</button>
-                <button onclick="clickNavPage('/contact');" class="nav-button"><i class="fa-solid fa-envelope"></i> Contact</button>
-            </nav>
-        </div>
-        <footer>
-            <p>© 2023 Dylan Ravel — <a class="all-rights-reserved" href="./privacy-policy"><i class="fa-solid fa-arrow-up-right-from-square"></i> All rights reserved</a>.</p>
-        </footer>
+    <div class="redirect-group">
+        <i class="fa-solid fa-spinner fa-spin loading-spinner"></i>
+        <h1 class="redirect-title">Taking you to <a class="redirect-link" href="blog.dylanravel.com" target="_self">here</a>.</h1>
     </div>
     <div class="ocean">
         <div class="wave"></div>
