@@ -209,13 +209,13 @@ h3 {
     letter-spacing: 1px;
     white-space: nowrap;
     opacity: 0;
-    display: none;
+    visibility: hidden;
 }
 
 .tooltip:hover::before, .tooltip:hover::after {
     transform: translate(-50%, -2px);
     opacity: 1;
-    display: block;
+    visibility: hidden;
 }
 
 /* skill popouts */
@@ -252,13 +252,13 @@ h3 {
     letter-spacing: 1px;
     white-space: nowrap;
     opacity: 0;
-    display: none;
+    visibility: hidden;
 }
 
 .skill-popout:hover::before, .skill-popout:hover::after {
     transform: translate(-50%, -2px);
     opacity: 1;
-    display: block;
+    visibility: visible;
 }
 
 .nav-button {
