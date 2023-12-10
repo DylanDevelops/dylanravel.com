@@ -242,9 +242,9 @@ h3 {
 .skill-popout::after {
     content: attr(data-tooltip);
     background: transparent;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 300;
-    top: -40px;
+    top: -45px;
     left: 50%;
     transform: translate(-50%, 20px); /* Center the content */
     padding: 10px;
@@ -253,6 +253,7 @@ h3 {
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 }
 
 .skill-popout:hover::before, .skill-popout:hover::after {
