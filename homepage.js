@@ -21,9 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if(randomEffect === 2) {
                 profilePic.classList.add('bouncing');
             } else if(randomEffect === 3) {
-                var duration = 15 * 1000;
+                var duration = 3 * 1000;
                 var animationEnd = Date.now() + duration;
-                var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+                var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 9999 };
 
                 function randomInRange(min, max) {
                 return Math.random() * (max - min) + min;
