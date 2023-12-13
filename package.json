@@ -4,7 +4,7 @@
   "description": "My personal portfolio website.",
   "main": "src/index.html",
   "scripts": {
-    "deploy": "gh-pages -d src",
+    "deploy": "gh-pages -d src -b main",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dylan Ravel",
