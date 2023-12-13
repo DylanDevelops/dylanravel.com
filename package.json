@@ -7,8 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dylan Ravel",
-  "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^6.1.0"
-  }
+  "license": "MPL-2.0"
 }
