@@ -2,7 +2,7 @@
   "name": "dylanravel.com",
   "version": "2.0.0",
   "description": "My personal portfolio website.",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
     "deploy": "gh-pages -d src",
     "test": "echo \"Error: no test specified\" && exit 1"

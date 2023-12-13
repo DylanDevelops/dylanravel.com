@@ -33,7 +33,7 @@ body {
 }
 
 .wave {
-    background: url(/Assets/SVGs/ocean.svg) repeat-x; 
+    background: url(./Assets/SVGs/ocean.svg) repeat-x; 
     position: absolute;
     top: -198px;
     width: 6400px;
