@@ -419,6 +419,30 @@ footer {
 }
 
 
+/* RÉSUMÉ PAGE */
+.resume-section {
+    max-height: 450px;
+    max-width: 440px;
+    overflow-y: auto;
+    background: rgb(231, 231, 231);
+    border-radius: 10px;
+    border: #222 3px solid;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.under-construction-content i {
+    padding-top: 40px;
+    font-size: 70px;
+    padding-bottom: 20px;
+}
+
+.under-construction-content p {
+    padding-bottom: 50px;
+    font-size: 16px;
+}
+
+
 /* PROJECTS PAGE */
 .project-container {
     max-width: 440px;
