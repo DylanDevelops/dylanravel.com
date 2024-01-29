@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const emptyCells = [...cellElements].filter(cell => !cell.classList.contains(PLAYER_X_CLASS) && !cell.classList.contains(PLAYER_O_CLASS));
 
-        if (Math.random() < 0.5) {
+        if (Math.random() <= 0.5) {
             // * 50% chance of making a random move
             const randomIndex = Math.floor(Math.random() * emptyCells.length);
             const selectedCell = emptyCells[randomIndex];
