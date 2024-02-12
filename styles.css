@@ -431,15 +431,38 @@ footer {
     margin-top: 10px;
 }
 
-.under-construction-content i {
-    padding-top: 40px;
-    font-size: 70px;
-    padding-bottom: 20px;
+.resume-selection-content p {
+    /* padding-bottom: 50px; */
+    font-size: 16px;
 }
 
-.under-construction-content p {
-    padding-bottom: 50px;
-    font-size: 16px;
+.resume-selection-content button {
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: white;
+    color: #222;
+    box-shadow: #22222283 5px 5px 2px;
+    border: #222 1px solid;
+    transition: transform 0.1s ease;
+}
+
+.resume-selection-content button:hover {
+    background-color: #222;
+    border: white 1px solid;
+    color: white;
+    cursor: pointer;
+    transform: translateY(2px) rotateX(-2deg);
+    box-shadow: none;
+}
+
+.resume-question-text {
+    text-decoration: dotted;
+    font-size: 10px;
+    margin-top: 90px;
 }
 
 
