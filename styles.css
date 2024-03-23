@@ -15,10 +15,21 @@ html, body {
     height: 100%; 
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #68f7ff 100%);
+}
+
 body {
     display: flex;
     min-height: 100vh;
-    background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #68f7ff 100%);
+    background: transparent;
     overflow-x: hidden;
 }
 
