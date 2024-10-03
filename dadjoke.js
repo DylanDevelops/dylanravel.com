@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     jQuery.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/dadjokes?limit=1',
+        url: 'https://api.api-ninjas.com/v1/dadjokes',
         headers: { 'X-Api-Key': 'NkJn71G/TN0GtboS5seTgg==0ebYg4DWFK1pd0lp' },
         contentType: 'application/json',
         success: function(result) {
