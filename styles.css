@@ -433,7 +433,7 @@ footer {
 
 /* RÉSUMÉ PAGE */
 .resume-section {
-    max-height: 620px;
+    max-height: 450px;
     max-width: 440px;
     overflow-y: auto;
     background: rgb(231, 231, 231);
@@ -443,13 +443,13 @@ footer {
     margin-top: 10px;
 }
 
-.resume-content i {
+.under-construction-content i {
     padding-top: 40px;
     font-size: 70px;
     padding-bottom: 20px;
 }
 
-.resume-content p {
+.under-construction-content p {
     padding-bottom: 50px;
     font-size: 16px;
 }
