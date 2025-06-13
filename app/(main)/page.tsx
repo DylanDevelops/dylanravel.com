@@ -14,10 +14,18 @@ const MainPage = () => {
       <main className="relative flex flex-col gap-2 flex-1 justify-center items-center space-y-2 p-10 z-10">
         <nav className="flex flex-row max-w-[60rem] frosted-glass-card p-4 gap-6 items-center">
           <BoxIcon className="text-white w-8 h-8" />
-          <p className="text-white font-bold">About</p>
-          <p className="text-white font-bold">Skills</p>
-          <p className="text-white font-bold">Projects</p>
-          <p className="text-white font-bold">Contact</p>
+          <Link href="/#about" className="text-white font-bold">
+            About
+          </Link>
+          <Link href="/#skills" className="text-white font-bold">
+            Skills
+          </Link>
+          <Link href="/#projects" className="text-white font-bold">
+            Projects
+          </Link>
+          <Link href="/#contact" className="text-white font-bold">
+            Contact
+          </Link>
         </nav>
         <div className="flex flex-col md:flex-row max-w-[60rem] frosted-glass-card p-10 gap-6 items-start">
           <div className="flex flex-row md:flex-col md:items-center gap-2 flex-shrink-0">
