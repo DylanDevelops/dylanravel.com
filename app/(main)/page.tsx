@@ -5,11 +5,12 @@ import "./_components/frosted-glass.css";
 import Link from "next/link";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 
-import { GitHubURL, InstagramURL, LinkedInURL } from "@/lib/links";
+import { GitHubURL, InstagramURL, ItchIoURL, LinkedInURL } from "@/lib/links";
 import Footer from "./_components/footer";
 import Navbar from "./_components/navbar";
 import About from "./_components/sections/about";
 import Contact from "./_components/sections/contact";
+import Hello from "./_components/sections/hello";
 import Projects from "./_components/sections/projects";
 import Skills from "./_components/sections/skills";
 
@@ -19,8 +20,8 @@ const MainPage = () => {
       <div className="absolute inset-0 bg-[#202020]/80 pointer-events-none z-0" />
       <main className="relative flex flex-col gap-2 flex-1 justify-center items-center space-y-2 p-10 z-10">
         <Navbar />
-        <div className="flex flex-col md:flex-row max-w-[60rem] frosted-glass-card p-10 gap-6 items-start">
-          <div className="flex flex-row md:flex-col md:items-center gap-2 flex-shrink-0">
+        <div className="flex flex-col md:flex-row max-w-[60rem] frosted-glass-card p-10 gap-6">
+          <div className="flex flex-col items-center gap-2 flex-shrink-0">
             <div className="frosted-glass-card">
               <Image
                 src="/images/pfp.webp"
@@ -33,7 +34,7 @@ const MainPage = () => {
             </div>
             <div className="flex flex-col gap-2">
               <p className="font-bold text-2xl text-white">Dylan Ravel</p>
-              <div className="flex flex-row gap-2 md:justify-center">
+              <div className="flex flex-row gap-2 justify-center">
                 <Link
                   href={GitHubURL}
                   target="_blank"
@@ -57,8 +58,34 @@ const MainPage = () => {
                 </Link>
               </div>
             </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex flex-row gap-2 justify-center">
+                <Link
+                  href={ItchIoURL}
+                  target="_blank"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                >
+                  <Image
+                    src="/icons/itch.svg"
+                    alt="Itch.io Logo"
+                    className="w-5 h-5"
+                    unoptimized
+                    width={1}
+                    height={1}
+                  />
+                </Link>
+                <Link
+                  href={LinkedInURL}
+                  target="_blank"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                >
+                  <LinkedinIcon className="w-5 h-5" />
+                </Link>
+              </div>
+            </div>
           </div>
           <div className="flex-1 flex-col min-w-0 space-y-10">
+            <Hello />
             <About />
             <Skills />
             <Projects />
