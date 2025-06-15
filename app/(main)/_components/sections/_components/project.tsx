@@ -34,9 +34,11 @@ const Project = ({
           <p>{description}</p>
           <div className="flex flex-col gap-2 lg:flex-row justify-between">
             {tags && (
-              <ul className="flex flex-row gap-2 mt-2 text-xs text-white/60">
+              <ul className="flex flex-row flex-wrap gap-2 mt-2 text-xs text-white/60">
                 {tags.map((filter) => (
-                  <p key={filter}>[ {filter} ]</p>
+                  <li key={filter} className="whitespace-nowrap">
+                    [ {filter} ]
+                  </li>
                 ))}
               </ul>
             )}
