@@ -5,7 +5,7 @@ import "@/components/css/frosted-glass.css";
 import Link from "next/link";
 import { InstagramIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
-import { ContactInformation } from "@/lib/branding";
+import { ProfileInformation } from "@/lib/branding";
 import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL } from "@/lib/links";
 import Footer from "./_components/footer";
 import Navbar from "./_components/navbar";
@@ -25,7 +25,7 @@ const MainPage = () => {
           <div className="flex flex-col items-center gap-2 md:flex-shrink-0 md:sticky top-10 md:self-start h-fit">
             <div className="frosted-glass-button rounded-4xl">
               <Image
-                src="/images/pfp.webp"
+                src={ProfileInformation.Headshots[0]}
                 unoptimized
                 width={1}
                 height={1}
@@ -37,7 +37,7 @@ const MainPage = () => {
               <p className="font-bold text-[1.5rem] text-white">Dylan Ravel</p>
               <div className="flex flex-col gap-2 w-max mx-auto">
                 <Link
-                  href={`mailto:${ContactInformation.Email}`}
+                  href={`mailto:${ProfileInformation.Email}`}
                   target="_blank"
                   className="frosted-glass-button py-2 rounded-full p-2 text-white hover:scale-110 transition-all duration-200 flex flex-row gap-2 justify-between items-center w-full"
                 >

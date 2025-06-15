@@ -1,4 +1,5 @@
-export const ContactInformation = {
+export const ProfileInformation = {
   Name: "Dylan Ravel",
+  Headshots: ["/images/pfp.webp", "/images/pfp2.webp"],
   Email: "hello@dylanravel.com",
 };
