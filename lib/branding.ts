@@ -1,4 +1,4 @@
 export const ContactInformation = {
   Name: "Dylan Ravel",
-  Email: "mailto:hello@dylanravel.com",
+  Email: "hello@dylanravel.com",
 };

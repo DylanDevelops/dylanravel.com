@@ -3,7 +3,7 @@ import Image from "next/image";
 import "./_components/frosted-glass.css";
 
 import Link from "next/link";
-import { GithubIcon, InstagramIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import { InstagramIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
 import { ContactInformation } from "@/lib/branding";
 import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL } from "@/lib/links";
@@ -37,7 +37,7 @@ const MainPage = () => {
               <p className="font-bold text-[1.5rem] text-white">Dylan Ravel</p>
               <div className="flex flex-col gap-2 w-max mx-auto">
                 <Link
-                  href={ContactInformation.Email}
+                  href={`mailto:${ContactInformation.Email}`}
                   target="_blank"
                   className="frosted-glass-button py-2 rounded-full p-2 text-white hover:scale-110 transition-all duration-200 flex flex-row gap-2 justify-between items-center w-full"
                 >
@@ -49,7 +49,14 @@ const MainPage = () => {
                     target="_blank"
                     className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <GithubIcon className="w-5 h-5" />
+                    <Image
+                      src="/icons/github.svg"
+                      alt="GitHub Logo"
+                      className="w-5 h-5"
+                      unoptimized
+                      width={1}
+                      height={1}
+                    />
                   </Link>
                   <Link
                     href={LinkedInURL}
@@ -91,7 +98,7 @@ const MainPage = () => {
                 >
                   <Image
                     src="/icons/kofi.svg"
-                    alt="Itch.io Logo"
+                    alt="Ko-fi Logo"
                     className="w-5 h-5 bg-blend-color"
                     unoptimized
                     width={1}
