@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import "./_components/frosted-glass.css";
+import "@/components/css/frosted-glass.css";
 
 import Link from "next/link";
 import { InstagramIcon, LinkedinIcon, MailIcon } from "lucide-react";
