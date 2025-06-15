@@ -1,6 +1,6 @@
 const Skills = () => {
   return (
-    <section id="skills" className="flex flex-col gap-2">
+    <section id="skills" className="flex flex-col gap-2 scroll-mt-4">
       <h1 className="text-white font-bold text-2xl">Skills</h1>
       <div>
         <p>

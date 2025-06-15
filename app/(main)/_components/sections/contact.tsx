@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section id="contact" className="flex flex-col gap-2">
+    <section id="contact" className="flex flex-col gap-2 scroll-mt-4">
       <h1 className="text-white font-bold text-2xl">Contact</h1>
       <div>
         <p>
