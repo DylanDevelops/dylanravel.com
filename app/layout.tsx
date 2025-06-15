@@ -5,8 +5,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export const metadata: Metadata = {
-  title: "VI Learning Management System",
-  description: "A Learning Management System (LMS) built from the ground up for visually impaired (VI) students.",
+  title: "Dylan Ravel - Portfolio",
+  description: "A portfolio website containing skills, projects, and more by Dylan Ravel.",
 };
 
 export default function RootLayout({

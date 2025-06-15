@@ -5,7 +5,7 @@ import "./_components/frosted-glass.css";
 import Link from "next/link";
 import { GithubIcon, InstagramIcon, LinkedinIcon } from "lucide-react";
 
-import { GitHubURL, InstagramURL, ItchIoURL, LinkedInURL } from "@/lib/links";
+import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL } from "@/lib/links";
 import Footer from "./_components/footer";
 import Navbar from "./_components/navbar";
 import About from "./_components/sections/about";
@@ -38,21 +38,21 @@ const MainPage = () => {
                 <Link
                   href={GitHubURL}
                   target="_blank"
-                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
                   <GithubIcon className="w-5 h-5" />
                 </Link>
                 <Link
                   href={LinkedInURL}
                   target="_blank"
-                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
                   <LinkedinIcon className="w-5 h-5" />
                 </Link>
                 <Link
                   href={InstagramURL}
                   target="_blank"
-                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
                   <InstagramIcon className="w-5 h-5" />
                 </Link>
@@ -63,7 +63,7 @@ const MainPage = () => {
                 <Link
                   href={ItchIoURL}
                   target="_blank"
-                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
                   <Image
                     src="/icons/itch.svg"
@@ -75,11 +75,18 @@ const MainPage = () => {
                   />
                 </Link>
                 <Link
-                  href={LinkedInURL}
+                  href={KoFiURL}
                   target="_blank"
-                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200 hover:text-white/80"
+                  className="frosted-glass-card p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
-                  <LinkedinIcon className="w-5 h-5" />
+                  <Image
+                    src="/icons/kofi.svg"
+                    alt="Itch.io Logo"
+                    className="w-5 h-5 bg-blend-color"
+                    unoptimized
+                    width={1}
+                    height={1}
+                  />
                 </Link>
               </div>
             </div>
