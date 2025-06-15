@@ -5,11 +5,12 @@
  * This enum is used to categorize projects based on their type or team structure.
  *
  * @enum
- * @property {number} Game - Represents game projects.
- * @property {number} Website - Represents website projects.
- * @property {number} Tool - Represents tool projects.
- * @property {number} Solo - Represents projects completed individually.
- * @property {number} Team - Represents projects completed as part of a team.
+ * @property {string} Game - Represents game projects.
+ * @property {string} Website - Represents website projects.
+ * @property {string} Tool - Represents tool projects.
+ * @property {string} Solo - Represents projects completed individually.
+ * @property {string} Team - Represents projects completed as part of a team.
+ * @property {string} Awards - Represents projects that have won award(s).
  */
 export enum ProjectFilters {
   Game = "game",
@@ -17,6 +18,7 @@ export enum ProjectFilters {
   Tool = "tool",
   Solo = "solo",
   Team = "team",
+  Awards = "awards",
 }
 
 /**

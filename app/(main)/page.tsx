@@ -19,7 +19,7 @@ const MainPage = () => {
   return (
     <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#202020] bg-[url('/backgrounds/shapes.png')] bg-repeat bg-[length:600px_600px]">
       <div className="absolute inset-0 bg-[#202020]/80 pointer-events-none z-0" />
-      <main className="md:relative flex flex-col gap-2 flex-1 justify-center items-center space-y-2 p-10 z-10">
+      <main className="md:relative flex flex-col gap-2 flex-1 justify-center items-center space-y-2 p-4 z-10">
         <Navbar />
         <div className="flex flex-col items-center md:flex-row max-w-[60rem] frosted-glass-card p-10 gap-6">
           <div className="flex flex-col items-center gap-2 md:flex-shrink-0 md:sticky top-10 md:self-start h-fit">
