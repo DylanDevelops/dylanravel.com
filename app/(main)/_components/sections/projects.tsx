@@ -33,7 +33,7 @@ const Projects = () => {
             <button
               key={tag}
               className={cn(
-                "flex flex-row gap-2 items-center px-3 py-1 rounded-full border transition-all cursor-pointer",
+                "flex flex-row gap-2 items-center px-3 py-1 rounded-full border transition-all select-none cursor-pointer",
                 activeFilters.includes(tag)
                   ? "bg-white text-black border-white"
                   : "bg-transparent text-white border-white/40 hover:bg-white/10"
@@ -50,7 +50,7 @@ const Projects = () => {
         })}
         {activeFilters.length > 0 && (
           <button
-            className="flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-white/40 text-white bg-red-600 hover:bg-red-700 transition-all cursor-pointer"
+            className="flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-white/40 text-white bg-red-600 hover:bg-red-700 transition-all select-none cursor-pointer"
             onClick={() => setActiveFilters([])}
           >
             <CircleXIcon className="w-4 h-4" /> Clear Filters

@@ -53,10 +53,11 @@ const Project = ({
                     <Image
                       src="/icons/github.svg"
                       alt="GitHub Logo"
-                      className="w-4 h-4"
+                      className="w-4 h-4 select-none"
                       unoptimized
                       width={1}
                       height={1}
+                      draggable={false}
                     />
                   </Link>
                 )}
@@ -78,10 +79,11 @@ const Project = ({
                     <Image
                       src="/icons/itch.svg"
                       alt="Itch.io Logo"
-                      className="w-4 h-4"
+                      className="w-4 h-4 select-none"
                       unoptimized
                       width={1}
                       height={1}
+                      draggable={false}
                     />
                   </Link>
                 )}
@@ -94,10 +96,11 @@ const Project = ({
                     <Image
                       src="/icons/steam.svg"
                       alt="Itch.io Logo"
-                      className="w-4 h-4"
+                      className="w-4 h-4 select-none"
                       unoptimized
                       width={1}
                       height={1}
+                      draggable={false}
                     />
                   </Link>
                 )}

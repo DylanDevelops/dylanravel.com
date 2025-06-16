@@ -39,7 +39,7 @@ const MainPage = () => {
                 <Link
                   href={`mailto:${ProfileInformation.Email}`}
                   target="_blank"
-                  className="frosted-glass-button py-2 rounded-full p-2 text-white hover:scale-110 transition-all duration-200 flex flex-row gap-2 justify-between items-center w-full"
+                  className="frosted-glass-button py-2 rounded-full p-2 text-white hover:scale-110 transition-all duration-200 flex flex-row gap-2 justify-between items-center w-full select-none"
                 >
                   <MailIcon className="w-5 h-5" /> Contact Me
                 </Link>
@@ -52,10 +52,11 @@ const MainPage = () => {
                     <Image
                       src="/icons/github.svg"
                       alt="GitHub Logo"
-                      className="w-5 h-5"
+                      className="w-5 h-5 select-none"
                       unoptimized
                       width={1}
                       height={1}
+                      draggable={false}
                     />
                   </Link>
                   <Link
@@ -85,10 +86,11 @@ const MainPage = () => {
                   <Image
                     src="/icons/itch.svg"
                     alt="Itch.io Logo"
-                    className="w-5 h-5"
+                    className="w-5 h-5 select-none"
                     unoptimized
                     width={1}
                     height={1}
+                    draggable={false}
                   />
                 </Link>
                 <Link
@@ -99,10 +101,11 @@ const MainPage = () => {
                   <Image
                     src="/icons/kofi.svg"
                     alt="Ko-fi Logo"
-                    className="w-5 h-5 bg-blend-color"
+                    className="w-5 h-5 select-none"
                     unoptimized
                     width={1}
                     height={1}
+                    draggable={false}
                   />
                 </Link>
               </div>
