@@ -15,6 +15,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  "editor.wordWrap": "on",
   "eslint.validate": ["javascript", "typescript"],
   "prettier.ignorePath": ".prettierignore",
   "prettier.semi": true,
