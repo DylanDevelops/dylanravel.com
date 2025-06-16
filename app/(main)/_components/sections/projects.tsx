@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { CircleXIcon } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import { projectList } from "@/lib/project-list";
 import { ProjectTag, ProjectTagIcons } from "@/lib/types/project";
+import { cn } from "@/lib/utils";
 import Project from "./_components/project";
 
 const Projects = () => {
@@ -30,13 +32,12 @@ const Projects = () => {
           return (
             <button
               key={tag}
-              className={`flex flex-row gap-2 items-center px-3 py-1 rounded-full border transition-all cursor-pointer
-              ${
+              className={cn(
+                "flex flex-row gap-2 items-center px-3 py-1 rounded-full border transition-all cursor-pointer",
                 activeFilters.includes(tag)
                   ? "bg-white text-black border-white"
                   : "bg-transparent text-white border-white/40 hover:bg-white/10"
-              }
-            `}
+              )}
               onClick={() =>
                 setActiveFilters((filters) =>
                   filters.includes(tag) ? filters.filter((f) => f !== tag) : [...filters, tag]
@@ -47,7 +48,6 @@ const Projects = () => {
             </button>
           );
         })}
-        {/* Clear Filters Button */}
         {activeFilters.length > 0 && (
           <button
             className="flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-white/40 text-white bg-red-600 hover:bg-red-700 transition-all cursor-pointer"
@@ -57,14 +57,37 @@ const Projects = () => {
           </button>
         )}
       </div>
-      <div className="flex flex-col gap-4">
+      <motion.div layout transition={{ duration: 0.5, type: "spring" }} className="flex flex-col gap-4">
         <Separator />
-        {filteredProjects.length === 0 ? (
-          <p className="text-white/60 italic">No projects match the selected filters.</p>
-        ) : (
-          filteredProjects.map((project) => <Project key={project.title} {...project} />)
-        )}
-      </div>
+        <AnimatePresence>
+          {filteredProjects.length === 0 ? (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="text-white/60 italic"
+            >
+              No projects match the selected filters.
+            </motion.p>
+          ) : (
+            filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                layout
+                initial={{ opacity: 0, y: -20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.3, delay: index * 0.1 },
+                }}
+                exit={{ opacity: 0, y: -20, transition: { duration: 0.2 } }}
+              >
+                <Project {...project} />
+              </motion.div>
+            ))
+          )}
+        </AnimatePresence>
+      </motion.div>
     </section>
   );
 };
