@@ -27,4 +27,12 @@ export const projectList: ProjectProps[] = [
     tags: [ProjectTag.Game, ProjectTag.Team],
     itchLink: "https://dylandevelops.itch.io/escape-to-the-squeakeasy",
   },
+  {
+    title: "Notion to Outlook",
+    date: "2023",
+    description:
+      "Using Node.js, Notion to Outlook automatically syncs your Notion Calendar with Outlook Calendar to create a seamless integration tool. It runs automatically using GitHub actions on a scheduled basis. It was created to organize school assignments.",
+    tags: [ProjectTag.Tool, ProjectTag.Solo],
+    githubLink: "https://github.com/DylanDevelops/notion-to-outlook",
+  },
 ];
