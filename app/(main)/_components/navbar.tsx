@@ -96,19 +96,25 @@ const Navbar = () => {
               <div className={cn("flex-col", mobileMenuOpen ? "flex" : "hidden")}>
                 <Link
                   href="/#about"
-                  className="w-full px-10 py-2 pt-4 hover:bg-white/10 transition-colors duration-200 rounded-t-[3.125rem]"
+                  className="w-full px-10 py-2 pt-4 hover:bg-white/10 transition-colors duration-200 rounded-t-[3.125rem] select-none"
                 >
                   About
                 </Link>
-                <Link href="/#skills" className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200">
+                <Link
+                  href="/#skills"
+                  className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200 select-none"
+                >
                   Skills
                 </Link>
-                <Link href="/#projects" className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200">
+                <Link
+                  href="/#projects"
+                  className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200 select-none"
+                >
                   Projects
                 </Link>
                 <Link
                   href="/#contact"
-                  className="w-full px-10 py-2 pb-4 hover:bg-white/10 transition-colors duration-200 rounded-b-[3.125rem]"
+                  className="w-full px-10 py-2 pb-4 hover:bg-white/10 transition-colors duration-200 rounded-b-[3.125rem] select-none"
                 >
                   Contact
                 </Link>
