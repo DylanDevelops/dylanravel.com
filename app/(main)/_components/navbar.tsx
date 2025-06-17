@@ -105,7 +105,7 @@ const Navbar = () => {
             </div>
           </Link>
           <motion.div className={cn("text-white font-bold rounded-full cursor-pointer", showNav ?? "shadow-lg")}>
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait" initial={false}>
               {!mobileMenuOpen && (
                 <motion.div
                   key="menu-icon"
