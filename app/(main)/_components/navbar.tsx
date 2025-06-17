@@ -82,7 +82,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex w-full justify-center mt-4 sm:hidden">
-        <div className="flex flex-row justify-between w-full max-w-[60rem] px-6">
+        <div className="flex flex-row justify-between items-start w-full max-w-[60rem] px-6">
           <Link
             href="/"
             className={cn(
