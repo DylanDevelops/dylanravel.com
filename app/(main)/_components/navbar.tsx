@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { BoxIcon, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 
+import { ProfileInformation } from "@/lib/branding";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -39,7 +41,7 @@ const Navbar = () => {
           href="/"
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-4 pr-4 rounded-l-[3.125rem] duration-200 transition-colors"
         >
-          <BoxIcon className="text-white w-8 h-8" />
+          <ProfileInformation.Logo className="text-white w-8 h-8" />
         </Link>
         <Link
           href="/#about"
@@ -67,7 +69,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="flex w-full justify-center mt-4 sm:hidden">
-        <div className="flex flex-row justify-between w-full max-w-[60rem] px-4">
+        <div className="flex flex-row justify-between w-full max-w-[60rem] px-6">
           <Link
             href="/"
             className={cn(
@@ -76,20 +78,43 @@ const Navbar = () => {
             )}
           >
             <div className="flex flex-row w-min frosted-glass-card p-4 gap-6 items-center">
-              <BoxIcon className="text-white w-6 h-6" />
+              <ProfileInformation.Logo className="text-white w-6 h-6" />
             </div>
           </Link>
-          <Link
-            href="/"
+          <button
             className={cn(
-              "text-white font-bold rounded-full hover:bg-white/10 transition-colors duration-200",
-              showNav ?? "shadow-lg"
+              "text-white font-bold rounded-full cursor-pointer",
+              showNav ?? "shadow-lg",
+              !mobileMenuOpen ? "hover:bg-white/10 transition-colors duration-200" : ""
             )}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <div className="flex flex-row w-min frosted-glass-card p-4 gap-6 items-center">
-              <MenuIcon className="text-white w-6 h-6" />
+            <div
+              className={cn("flex flex-row w-min frosted-glass-card gap-6 items-center", !mobileMenuOpen ? "p-4" : "")}
+            >
+              <MenuIcon className={cn("text-white w-6 h-6", mobileMenuOpen ? "hidden" : "block")} />
+              <div className={cn("flex-col", mobileMenuOpen ? "flex" : "hidden")}>
+                <Link
+                  href="/#about"
+                  className="w-full px-10 py-2 pt-4 hover:bg-white/10 transition-colors duration-200 rounded-t-[3.125rem]"
+                >
+                  About
+                </Link>
+                <Link href="/#skills" className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200">
+                  Skills
+                </Link>
+                <Link href="/#projects" className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200">
+                  Projects
+                </Link>
+                <Link
+                  href="/#contact"
+                  className="w-full px-10 py-2 pb-4 hover:bg-white/10 transition-colors duration-200 rounded-b-[3.125rem]"
+                >
+                  Contact
+                </Link>
+              </div>
             </div>
-          </Link>
+          </button>
         </div>
       </div>
     </nav>
