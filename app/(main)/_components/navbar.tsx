@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { AnimatePresence, motion } from "framer-motion";
 import { MenuIcon } from "lucide-react";
 
 import { ProfileInformation } from "@/lib/branding";
@@ -40,6 +41,15 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.1 },
+    }),
+  };
 
   return (
     <nav
@@ -94,46 +104,59 @@ const Navbar = () => {
               <ProfileInformation.Logo className="text-white w-6 h-6" />
             </div>
           </Link>
-          <button
-            className={cn(
-              "text-white font-bold rounded-full cursor-pointer",
-              showNav ?? "shadow-lg",
-              !mobileMenuOpen ? "hover:bg-white/10 transition-colors duration-200" : ""
-            )}
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <div
-              className={cn("flex flex-row w-min frosted-glass-card gap-6 items-center", !mobileMenuOpen ? "p-4" : "")}
-            >
-              <MenuIcon className={cn("text-white w-6 h-6", mobileMenuOpen ? "hidden" : "block")} />
-              <div className={cn("flex-col", mobileMenuOpen ? "flex" : "hidden")}>
-                <Link
-                  href="/#about"
-                  className="w-full px-10 py-2 pt-4 hover:bg-white/10 transition-colors duration-200 rounded-t-[3.125rem] select-none"
+          <motion.div className={cn("text-white font-bold rounded-full cursor-pointer", showNav ?? "shadow-lg")}>
+            <AnimatePresence mode="wait">
+              {!mobileMenuOpen && (
+                <motion.div
+                  key="menu-icon"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={() => setMobileMenuOpen(true)}
+                  className="flex flex-row w-min frosted-glass-card gap-6 items-center"
                 >
-                  About
-                </Link>
-                <Link
-                  href="/#skills"
-                  className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200 select-none"
+                  <div className="w-min p-4 hover:bg-white/10 transition-colors duration-200 rounded-full">
+                    <MenuIcon className="text-white w-6 h-6" />
+                  </div>
+                </motion.div>
+              )}
+              {mobileMenuOpen && (
+                <motion.div
+                  key="menu-links"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col overflow-hidden frosted-glass-card"
                 >
-                  Skills
-                </Link>
-                <Link
-                  href="/#projects"
-                  className="w-full px-10 py-2 hover:bg-white/10 transition-colors duration-200 select-none"
-                >
-                  Projects
-                </Link>
-                <Link
-                  href="/#contact"
-                  className="w-full px-10 py-2 pb-4 hover:bg-white/10 transition-colors duration-200 rounded-b-[3.125rem] select-none"
-                >
-                  Contact
-                </Link>
-              </div>
-            </div>
-          </button>
+                  {["About", "Skills", "Projects", "Contact"].map((link, index) => (
+                    <motion.div
+                      key={link}
+                      custom={index}
+                      variants={linkVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="hidden"
+                      className="w-full hover:bg-white/10 transition-colors duration-200 select-none"
+                    >
+                      <Link
+                        href={`/#${link.toLowerCase()}`}
+                        className={cn(
+                          "w-full py-2 px-10 flex justify-center",
+                          index === 0 ? "pt-4 rounded-t-[3.125rem]" : "",
+                          index === 3 ? "pb-4 rounded-b-[3.125rem]" : ""
+                        )}
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                      >
+                        {link}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         </div>
       </div>
     </nav>
