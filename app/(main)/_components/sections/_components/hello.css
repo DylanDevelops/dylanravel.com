@@ -1,0 +1,41 @@
+.game-developer-text {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.programmer-text {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.student-text {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.scalable-text {
+  background: linear-gradient(to right, #ff9a9e, #fecfef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.creative-text {
+  background: linear-gradient(to right, #ff9a9e, #fecfef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.innovative-text {
+  background: linear-gradient(to right, #ff9a9e, #fecfef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
