@@ -4,20 +4,35 @@ import { BoxIcon, MenuIcon } from "lucide-react";
 const Navbar = () => {
   return (
     <nav className="w-full sm:w-auto">
-      <div className="hidden sm:flex flex-row max-w-[60rem] frosted-glass-card p-4 gap-6 items-center">
-        <Link href="/" className="text-white font-bold">
+      <div className="hidden sm:flex flex-row max-w-[60rem] frosted-glass-card items-center">
+        <Link
+          href="/"
+          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-4 pr-4 rounded-l-[3.125rem] duration-200 transition-colors"
+        >
           <BoxIcon className="text-white w-8 h-8" />
         </Link>
-        <Link href="/#about" className="text-white font-bold">
+        <Link
+          href="/#about"
+          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+        >
           About
         </Link>
-        <Link href="/#skills" className="text-white font-bold">
+        <Link
+          href="/#skills"
+          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+        >
           Skills
         </Link>
-        <Link href="/#projects" className="text-white font-bold">
+        <Link
+          href="/#projects"
+          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+        >
           Projects
         </Link>
-        <Link href="/#contact" className="text-white font-bold">
+        <Link
+          href="/#contact"
+          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 pr-4 rounded-r-[3.125rem] duration-200 transition-colors"
+        >
           Contact
         </Link>
       </div>

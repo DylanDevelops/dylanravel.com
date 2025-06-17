@@ -6,7 +6,7 @@ import Link from "next/link";
 import { InstagramIcon, LinkedinIcon, MailIcon } from "lucide-react";
 
 import { ProfileInformation } from "@/lib/branding";
-import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL } from "@/lib/links";
+import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL, ORCIDUrl } from "@/lib/links";
 import Footer from "./_components/footer";
 import Navbar from "./_components/navbar";
 import About from "./_components/sections/about";
@@ -67,11 +67,19 @@ const MainPage = () => {
                     <LinkedinIcon className="w-5 h-5" />
                   </Link>
                   <Link
-                    href={InstagramURL}
+                    href={ItchIoURL}
                     target="_blank"
                     className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <InstagramIcon className="w-5 h-5" />
+                    <Image
+                      src="/icons/itch.svg"
+                      alt="Itch.io Logo"
+                      className="w-5 h-5 select-none"
+                      unoptimized
+                      width={1}
+                      height={1}
+                      draggable={false}
+                    />
                   </Link>
                 </div>
               </div>
@@ -79,19 +87,26 @@ const MainPage = () => {
             <div className="flex flex-col gap-2">
               <div className="flex flex-row gap-2 justify-center">
                 <Link
-                  href={ItchIoURL}
+                  href={ORCIDUrl}
                   target="_blank"
                   className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
                   <Image
-                    src="/icons/itch.svg"
-                    alt="Itch.io Logo"
+                    src="/icons/orcid.svg"
+                    alt="ORCID Logo"
                     className="w-5 h-5 select-none"
                     unoptimized
                     width={1}
                     height={1}
                     draggable={false}
                   />
+                </Link>
+                <Link
+                  href={InstagramURL}
+                  target="_blank"
+                  className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
+                >
+                  <InstagramIcon className="w-5 h-5" />
                 </Link>
                 <Link
                   href={KoFiURL}

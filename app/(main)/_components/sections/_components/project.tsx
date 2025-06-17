@@ -7,7 +7,10 @@ import { ProjectProps } from "@/lib/types/project";
 
 const Project = ({
   title,
-  thumbnailUrl = `/projects/${title.toLowerCase().replaceAll(" ", "-")}.png`,
+  thumbnailUrl = `/projects/${title
+    .toLowerCase()
+    .replace(/[^a-z0-9 ]/gi, "")
+    .replaceAll(" ", "-")}.png`,
   date,
   description,
   tags,
@@ -24,7 +27,7 @@ const Project = ({
           unoptimized
           width={1920}
           height={1080}
-          alt={`An image of a project called "${title}"`}
+          alt={`The thumbnail for a project called "${title}"`}
           className="w-64 sm:w-48 h-full rounded-lg"
         />
         <div className="flex flex-col">
@@ -95,7 +98,7 @@ const Project = ({
                   >
                     <Image
                       src="/icons/steam.svg"
-                      alt="Itch.io Logo"
+                      alt="Steam Logo"
                       className="w-4 h-4 select-none"
                       unoptimized
                       width={1}

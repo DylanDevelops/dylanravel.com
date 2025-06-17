@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="flex flex-col gap-2 scroll-mt-4">
+    <section id="about" className="flex flex-col gap-2 scroll-mt-10">
       <h1 className="text-white font-bold text-2xl">About</h1>
       <p className="text-white/80">
         I am a game developer, programmer, and student passionate about building scalable, creative, and innovative

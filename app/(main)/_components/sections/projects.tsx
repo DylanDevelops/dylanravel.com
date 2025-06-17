@@ -20,10 +20,11 @@ const Projects = () => {
       : projectList.filter((project) => project.tags?.some((tag) => activeFilters.includes(tag)));
 
   return (
-    <section id="projects" className="flex flex-col gap-2 scroll-mt-4">
+    <section id="projects" className="flex flex-col gap-2 scroll-mt-10">
       <h1 className="text-white font-bold text-2xl">Projects</h1>
       <p className="text-white/80">
-        Learn about projects I have worked on. Use the buttons below to filter the shown projects.
+        Learn about {filteredProjects.length} project{filteredProjects.length > 1 && "s"} that I have worked on. Use the
+        buttons below to filter the shown projects.
       </p>
       <div className="flex flex-wrap gap-2 mb-2">
         {allTags.map((tag) => {
