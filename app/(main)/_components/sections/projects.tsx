@@ -21,7 +21,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex flex-col gap-2 scroll-mt-10">
-      <h1 className="text-white font-bold text-2xl">Projects</h1>
+      <h2 className="text-white font-bold text-2xl">Projects</h2>
       <p className="text-white/80">
         Learn about {filteredProjects.length} project{filteredProjects.length > 1 && "s"} that I have worked on. Use the
         buttons below to filter the shown projects.

@@ -1,7 +1,7 @@
 const Skills = () => {
   return (
     <section id="skills" className="flex flex-col gap-2 scroll-mt-10">
-      <h1 className="text-white font-bold text-2xl">Skills</h1>
+      <h2 className="text-white font-bold text-2xl">Skills</h2>
       <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ad quam, porro voluptas adipisci, aut magnam

@@ -1,12 +1,14 @@
 import Link from "next/link";
 
+import { ProfileInformation } from "@/lib/branding";
+
 const Footer = () => {
   return (
     <footer className="flex flex-row max-w-[60rem] frosted-glass-card p-4 gap-6 items-center">
       <p className="text-white">
-        © 2025 by{" "}
+        © {ProfileInformation.CopyrightYear} by{" "}
         <Link href="/" className="font-bold">
-          Dylan Ravel
+          {ProfileInformation.FullName}
         </Link>
       </p>
     </footer>

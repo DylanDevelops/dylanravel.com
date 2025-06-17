@@ -5,8 +5,8 @@ import "./globals.css";
 import { ProfileInformation } from "@/lib/branding";
 
 export const metadata: Metadata = {
-  title: "Dylan Ravel - Portfolio",
-  description: "A portfolio website containing skills, projects, and more by Dylan Ravel.",
+  title: `${ProfileInformation.FullName} - Portfolio`,
+  description: `A portfolio website containing skills, projects, and more by ${ProfileInformation.FullName}.`,
   icons: {
     icon: [
       {

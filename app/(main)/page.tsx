@@ -29,12 +29,12 @@ const MainPage = () => {
                 unoptimized
                 width={1}
                 height={1}
-                alt="A picture of Dylan Ravel"
+                alt={`A picture of ${ProfileInformation.FullName}`}
                 className="w-48 h-48 rounded-4xl"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <p className="font-bold text-[1.5rem] text-white">Dylan Ravel</p>
+              <h1 className="font-bold text-[1.5rem] text-white">{ProfileInformation.FullName}</h1>
               <div className="flex flex-col gap-2 w-max mx-auto">
                 <Link
                   href={`mailto:${ProfileInformation.Email}`}
