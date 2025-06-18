@@ -29,6 +29,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY <= 0) {
+        setShowNav(true);
+        setIsScrollingAfterClick(false);
+        if (scrollEndTimeout.current) {
+          clearTimeout(scrollEndTimeout.current);
+        }
+        lastScrollY.current = 0;
+        return;
+      }
+
       if (scrollEndTimeout.current) {
         clearTimeout(scrollEndTimeout.current);
       }
@@ -38,14 +49,11 @@ const Navbar = () => {
       }, 150);
 
       if (isScrollingAfterClick) {
-        lastScrollY.current = window.scrollY;
+        lastScrollY.current = currentScrollY;
         return;
       }
 
-      const currentScrollY = window.scrollY;
-      if (currentScrollY <= 0) {
-        setShowNav(true);
-      } else if (currentScrollY > lastScrollY.current) {
+      if (currentScrollY > lastScrollY.current) {
         setShowNav(false);
         setMobileMenuOpen(false);
       } else {
