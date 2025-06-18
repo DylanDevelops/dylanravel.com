@@ -12,7 +12,7 @@ const Hello = () => {
 
   return (
     <section id="hello" className="flex flex-col gap-4 scroll-mt-10">
-      <h2 className="text-white font-bold text-4xl">
+      <h2 className="text-white font-bold text-3xl md:text-4xl">
         {headerText.map((char, i) => (
           <motion.span
             initial={{ opacity: 0 }}

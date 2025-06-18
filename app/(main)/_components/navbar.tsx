@@ -12,7 +12,7 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
-  const navRef = useRef<HTMLElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +21,7 @@ const Navbar = () => {
         setShowNav(true);
       } else if (currentScrollY > lastScrollY.current) {
         setShowNav(false);
+        setMobileMenuOpen(false);
       } else {
         setShowNav(true);
       }
@@ -53,7 +54,6 @@ const Navbar = () => {
 
   return (
     <nav
-      ref={navRef}
       className={cn(
         "w-full sm:w-auto z-50 transition-transform duration-300 fixed top-0 left-1/2 -translate-x-1/2",
         showNav ? "translate-y-0" : "-translate-y-[calc(100%+24rem)]"
@@ -104,7 +104,10 @@ const Navbar = () => {
               <ProfileInformation.Logo className="text-white w-6 h-6" />
             </div>
           </Link>
-          <motion.div className={cn("text-white font-bold rounded-full cursor-pointer", showNav ?? "shadow-lg")}>
+          <motion.div
+            ref={navRef}
+            className={cn("text-white font-bold rounded-full cursor-pointer", showNav ?? "shadow-lg")}
+          >
             <AnimatePresence mode="wait" initial={false}>
               {!mobileMenuOpen && (
                 <motion.div
