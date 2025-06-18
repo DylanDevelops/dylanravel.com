@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import { ProfileInformation } from "@/lib/branding";
 import { DomainURL } from "@/lib/links";
 
@@ -36,6 +38,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className="bg-[#202020] overflow-x-clip">{children}</body>
+      <GoogleAnalytics gaId={ProfileInformation.GoogleAnalyticsTag} />
     </html>
   );
 }
