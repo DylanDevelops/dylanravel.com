@@ -16,9 +16,8 @@ const About = () => {
           skills, allows me to approach challenges with a well-rounded and human-centered perspective.
         </p>
         <p>
-          I'm probably snowboarding, hiking, or indulging my creative side through screenwriting and acting when not in
-          front of a computer. At the end of the day, I enjoy a good card game with friends or playing with my cat,
-          Yonder.
+          I'm probably snowboarding, hiking, or indulging my creative side through screenwriting and acting when not
+          coding. At the end of the day, I enjoy a good card game with friends or playing with my cat, Yonder.
         </p>
       </div>
     </section>
