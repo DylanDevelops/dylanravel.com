@@ -10,7 +10,7 @@ const Project = ({
   thumbnailUrl = `/projects/${title
     .toLowerCase()
     .replace(/[^a-z0-9 ]/gi, "")
-    .replaceAll(" ", "-")}.png`,
+    .replaceAll(" ", "-")}.webp`,
   date,
   description,
   tags,
