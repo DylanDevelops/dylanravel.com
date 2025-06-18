@@ -64,7 +64,7 @@ const MainPage = () => {
                     target="_blank"
                     className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <LinkedinIcon className="w-5 h-5" />
+                    <LinkedinIcon className="w-5 h-5" aria-label="LinkedIn Logo" />
                   </Link>
                   <Link
                     href={ItchIoURL}
@@ -106,7 +106,7 @@ const MainPage = () => {
                   target="_blank"
                   className="frosted-glass-button p-2 rounded-full text-white hover:scale-110 transition-all duration-200"
                 >
-                  <InstagramIcon className="w-5 h-5" />
+                  <InstagramIcon className="w-5 h-5" aria-label="Instagram Logo" />
                 </Link>
                 <Link
                   href={KoFiURL}

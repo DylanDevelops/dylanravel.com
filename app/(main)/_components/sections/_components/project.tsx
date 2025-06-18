@@ -70,7 +70,7 @@ const Project = ({
                     target="_blank"
                     className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <Globe className="w-4 h-4" />
+                    <Globe className="w-4 h-4" aria-label="Website Icon" />
                   </Link>
                 )}
                 {itchLink && (
