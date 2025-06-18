@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img alt="An image reading 'DYLAN RAVEL - Portfolio'" src="" width="70%">
+</p>
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+# [dylanravel.com](https://dylanravel.com)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+</div>
+
+[dylanravel.com](https://dylanravel.com) is an open-source [Next.js](https://nextjs.org/) website. It is written in [TypeScript](https://www.typescriptlang.org) and
+uses [React](https://reactjs.org/).
+
+## Installation
+
+1. **Install Node**: Install the correct version of node (v22.15.0) for the project.
+
+> ### Note About Node
+>
+> If you are using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm), you can run:
+>
+> ```sh
+> nvm install
+> nvm use
+> ```
+
+Run the follow command to make sure that you are on the correct version of node:
+
+```sh
+node -v # Should be v22.15.0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Node Dependencies**: Install all the dependencies that the project uses by running the following command in the project's root directory:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the Development Server**: Start the development server to see your changes live:
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open the website by visiting <http://localhost:3000> with your browser. When you make changes to a code file and save the file, the live preview will update on the url automatically.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are always welcome though as this is my personal portfolio website, it most likely won't be accepted.
 
-## Deploy on Vercel
+## Feedback
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you have any feedback, bug reports, or anything else, please create an [issue](https://github.com/DylanDevelops/dylanravel.com/issues).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

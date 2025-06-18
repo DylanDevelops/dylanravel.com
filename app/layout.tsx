@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { ProfileInformation } from "@/lib/branding";
+import { DomainURL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: `${ProfileInformation.FullName} - Portfolio`,
@@ -10,10 +11,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: `${ProfileInformation.Headshots[0]}`,
-        href: `${ProfileInformation.Headshots[0]}`,
+        url: ProfileInformation.Headshots[0],
+        href: ProfileInformation.Headshots[0],
       },
     ],
+  },
+  openGraph: {
+    type: "website",
+    url: DomainURL,
+    images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
   },
 };
 

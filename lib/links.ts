@@ -1,3 +1,4 @@
+export const DomainURL = "https://www.dylanravel.com";
 export const GitHubURL = "https://github.com/dylandevelops/";
 export const LinkedInURL = "https://www.linkedin.com/in/dylanravel/";
 export const ItchIoURL = "https://dylandevelops.itch.io/";
