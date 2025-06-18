@@ -53,7 +53,7 @@ const Skill = ({
                 initial={{ opacity: 0, maxHeight: 0 }}
                 animate={{
                   opacity: 1,
-                  maxHeight: "100px",
+                  maxHeight: "500rem",
                   transition: { delay: 0.2, ease: "easeOut", duration: 0.3 },
                 }}
                 exit={{
