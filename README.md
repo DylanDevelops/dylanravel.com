@@ -1,15 +1,16 @@
 <p align="center">
-  <img alt="An image reading 'DYLAN RAVEL - Portfolio'" src="" width="70%">
+  <img alt="An image reading 'DYLAN RAVEL - Portfolio'" src="https://github.com/user-attachments/assets/6f6e4fac-e2b1-4f8b-8947-5ca0dcec005d" width="70%">
 </p>
 
 <div align="center">
 
 # [dylanravel.com](https://dylanravel.com)
 
+My [portfolio](https://dylanravel.com) is an open-source [Next.js](https://nextjs.org/) website. It is written in [TypeScript](https://www.typescriptlang.org) and
+uses [React](https://reactjs.org/).
+
 </div>
 
-[dylanravel.com](https://dylanravel.com) is an open-source [Next.js](https://nextjs.org/) website. It is written in [TypeScript](https://www.typescriptlang.org) and
-uses [React](https://reactjs.org/).
 
 ## Installation
 
@@ -46,7 +47,7 @@ npm run dev
 
 ## Contributing
 
-Contributions are always welcome though as this is my personal portfolio website, it most likely won't be accepted.
+Contributions are always welcome, though, as this is my personal portfolio website, it may be rejected for any reason.
 
 ## Feedback
 
