@@ -13,9 +13,35 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
   const navRef = useRef<HTMLDivElement>(null);
+  const [isScrollingAfterClick, setIsScrollingAfterClick] = useState(false);
+  const scrollEndTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  const handleLinkClick = () => {
+    setShowNav(false);
+    setIsScrollingAfterClick(true);
+  };
+
+  const handleMobileLinkClick = () => {
+    setMobileMenuOpen(false);
+    setShowNav(false);
+    setIsScrollingAfterClick(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
+      if (scrollEndTimeout.current) {
+        clearTimeout(scrollEndTimeout.current);
+      }
+
+      scrollEndTimeout.current = setTimeout(() => {
+        setIsScrollingAfterClick(false);
+      }, 150);
+
+      if (isScrollingAfterClick) {
+        lastScrollY.current = window.scrollY;
+        return;
+      }
+
       const currentScrollY = window.scrollY;
       if (currentScrollY <= 0) {
         setShowNav(true);
@@ -40,8 +66,11 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       document.removeEventListener("mousedown", handleClickOutside);
+      if (scrollEndTimeout.current) {
+        clearTimeout(scrollEndTimeout.current);
+      }
     };
-  }, []);
+  }, [isScrollingAfterClick]);
 
   const linkVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -68,24 +97,28 @@ const Navbar = () => {
         </Link>
         <Link
           href="/#about"
+          onClick={handleLinkClick}
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
         >
           About
         </Link>
         <Link
           href="/#skills"
+          onClick={handleLinkClick}
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
         >
           Skills
         </Link>
         <Link
           href="/#projects"
+          onClick={handleLinkClick}
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
         >
           Projects
         </Link>
         <Link
           href="/#contact"
+          onClick={handleLinkClick}
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 pr-4 rounded-r-[3.125rem] duration-200 transition-colors"
         >
           Contact
@@ -100,7 +133,7 @@ const Navbar = () => {
               showNav ?? "shadow-lg"
             )}
           >
-            <div className="flex flex-row w-min frosted-glass-card p-4 gap-6 items-center">
+            <div className="flex flex-row w-min frosted-glass-card p-5 gap-6 items-center">
               <ProfileInformation.Logo className="text-white w-6 h-6" />
             </div>
           </Link>
@@ -119,7 +152,7 @@ const Navbar = () => {
                   onClick={() => setMobileMenuOpen(true)}
                   className="flex flex-row w-min frosted-glass-card gap-6 items-center"
                 >
-                  <div className="w-min p-4 hover:bg-white/10 transition-colors duration-200 rounded-full">
+                  <div className="w-min p-5 hover:bg-white/10 transition-colors duration-200 rounded-full">
                     <MenuIcon className="text-white w-6 h-6" />
                   </div>
                 </motion.div>
@@ -150,7 +183,7 @@ const Navbar = () => {
                           index === 0 ? "pt-4 rounded-t-[3.125rem]" : "",
                           index === 3 ? "pb-4 rounded-b-[3.125rem]" : ""
                         )}
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        onClick={handleMobileLinkClick}
                       >
                         {link}
                       </Link>
