@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: ProfileInformation.Headshots[0],
-        href: ProfileInformation.Headshots[0],
+        url: ProfileInformation.Headshots[1],
+        href: ProfileInformation.Headshots[1],
       },
     ],
   },

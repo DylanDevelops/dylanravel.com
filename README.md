@@ -11,7 +11,6 @@ uses [React](https://reactjs.org/).
 
 </div>
 
-
 ## Installation
 
 1. **Install Node**: Install the correct version of node (v22.15.0) for the project.

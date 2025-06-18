@@ -8,7 +8,6 @@ import { SkillProps } from "@/lib/types/skill";
 import Skill from "./_components/skill";
 
 const Skills = () => {
-  const totalSkills = softSkills.length + hardSkills.length;
   const [selectedSkill, setSelectedSkill] = useState<SkillProps | null>(null);
 
   const handleSkillClick = (skill: SkillProps) => {
@@ -19,8 +18,8 @@ const Skills = () => {
     <section id="skills" className="flex flex-col gap-2 scroll-mt-10">
       <h2 className="text-white font-bold text-2xl">Skills</h2>
       <p className="text-white/80">
-        Learn about {totalSkills} skill{totalSkills > 1 ? "s" : ""} that make
-        {totalSkills === 1 ? "s" : ""} me a well-rounded developer. Click on a skill to learn more about it.
+        Explore the skills that make me a versatile developer. Click any skill to learn more about how it shapes my
+        work.
       </p>
       <div className="flex flex-col gap-8 mt-2">
         <div className="flex flex-col gap-2">

@@ -1,4 +1,4 @@
-import { BoxIcon } from "lucide-react";
+import { CodeXmlIcon } from "lucide-react";
 
 export const ProfileInformation = {
   FirstName: "Dylan",
@@ -6,8 +6,8 @@ export const ProfileInformation = {
   get FullName() {
     return `${this.FirstName} ${this.LastName}`;
   },
-  Headshots: ["/images/pfp.webp", "/images/pfp2.webp"],
+  Headshots: ["/images/pfp.webp", "/images/pfp_rounded.webp", "/images/pfp2", "/images/pfp2_rounded"],
   Email: "hello@dylanravel.com",
-  Logo: BoxIcon,
+  Logo: CodeXmlIcon,
   CopyrightYear: new Date().getFullYear(),
 };
