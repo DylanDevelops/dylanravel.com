@@ -1,21 +1,57 @@
+<p align="center">
+  <img alt="An image reading 'DYLAN RAVEL - Portfolio'" src="https://github.com/user-attachments/assets/6f6e4fac-e2b1-4f8b-8947-5ca0dcec005d" width="70%">
+</p>
+
 <div align="center">
-  
-# [dylanravel.com](https://www.dylanravel.com/)
 
-<img width="600" alt="Website Main Social Image" src="https://github.com/DylanDevelops/dylanravel.com/assets/48571264/1eed2eee-92b1-4ae8-8e2a-71f1bf65e855">
+# [dylanravel.com](https://dylanravel.com)
 
-[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=brightgreen&up_message=online&url=https%3A%2F%2Fwww.dylanravel.com)](https://www.dylanravel.com/) [![pages-build-deployment](https://github.com/DylanDevelops/dylanravel.com/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/DylanDevelops/dylanravel.com/actions/workflows/pages/pages-build-deployment) [![CodeFactor](https://www.codefactor.io/repository/github/dylandevelops/dylanravel.com/badge)](https://www.codefactor.io/repository/github/dylandevelops/dylanravel.com)
+My [portfolio](https://dylanravel.com) is an open-source [Next.js](https://nextjs.org/) website. It is written in [TypeScript](https://www.typescriptlang.org) and
+uses [React](https://reactjs.org/).
 
 </div>
 
-# What is this?
-This is the official codebase for dylanravel.com. All the files are also hosted on here. 
+## Installation
 
-# Issues or Bugs
-Please create an [issue](https://github.com/DylanDevelops/dylanravel.com/issues/new) with as much information as you can. I will try my best to fix it.
+1. **Install Node**: Install the correct version of node (v22.15.0) for the project.
 
-# Contributions
-This project is open source so that others can update it if they would like to. If there is a feature you implement, please create a pull request **targeting the `main` branch**. Submit the pull request when you are done making changes and I will either approve, deny, or request changes.
+> ### Note About Node
+>
+> If you are using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm), you can run:
+>
+> ```sh
+> nvm install
+> nvm use
+> ```
 
-# Special Thanks
-- [@kwertyops](https://github.com/kwertyops) - Helped clean up some code and fix some formatting issues
+Run the follow command to make sure that you are on the correct version of node:
+
+```sh
+node -v # Should be v22.15.0
+```
+
+2. **Install Node Dependencies**: Install all the dependencies that the project uses by running the following command in the project's root directory:
+
+```sh
+npm install
+```
+
+3. **Start the Development Server**: Start the development server to see your changes live:
+
+```sh
+npm run dev
+```
+
+4. Open the website by visiting <http://localhost:3000> with your browser. When you make changes to a code file and save the file, the live preview will update on the url automatically.
+
+## Contributing
+
+Contributions are always welcome, though, as this is my personal portfolio website, it may be rejected for any reason.
+
+## Feedback
+
+If you have any feedback, bug reports, or anything else, please create an [issue](https://github.com/DylanDevelops/dylanravel.com/issues).
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
