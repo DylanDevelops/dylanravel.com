@@ -10,4 +10,5 @@ export const ProfileInformation = {
   Email: "hello@dylanravel.com",
   Logo: CodeXmlIcon,
   CopyrightYear: new Date().getFullYear(),
+  GoogleAnalyticsTag: "G-81KCGWFGBT",
 };
