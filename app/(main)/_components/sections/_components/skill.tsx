@@ -5,7 +5,7 @@ import { LucideIcon } from "lucide-react";
 import { SkillProps } from "@/lib/types/skill";
 import { cn } from "@/lib/utils";
 
-const SkillBadge = ({
+const Skill = ({
   skill,
   isSelected,
   onClick,
@@ -40,7 +40,7 @@ const SkillBadge = ({
             )}
           </motion.div>
         )}
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-center min-w-0">
           <motion.h3
             layout="position"
             className={cn("text-white/80", isSelected ? "font-bold text-lg" : "text-sm px-2 py-0.5")}
@@ -54,9 +54,13 @@ const SkillBadge = ({
                 animate={{
                   opacity: 1,
                   maxHeight: "100px",
-                  transition: { delay: 0.2 },
+                  transition: { delay: 0.2, ease: "easeOut", duration: 0.3 },
                 }}
-                exit={{ opacity: 0, maxHeight: 0 }}
+                exit={{
+                  opacity: 0,
+                  maxHeight: 0,
+                  transition: { duration: 0.1 },
+                }}
                 className="text-white/80 mt-1 text-sm"
               >
                 {skill.description}
@@ -69,4 +73,4 @@ const SkillBadge = ({
   );
 };
 
-export default SkillBadge;
+export default Skill;
