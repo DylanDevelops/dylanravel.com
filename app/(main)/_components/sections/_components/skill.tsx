@@ -34,7 +34,15 @@ const Skill = ({
             animate={{ opacity: 1, transition: { delay: 0.2 } }}
           >
             {typeof skill.icon === "string" ? (
-              <Image src={skill.icon} alt={`${skill.name} icon`} width={40} height={40} className="w-10 h-10" />
+              <Image
+                src={skill.icon}
+                alt={`${skill.name} icon`}
+                width={40}
+                height={40}
+                className="w-10 h-10 select-none"
+                unoptimized
+                draggable={false}
+              />
             ) : (
               <IconComponent className="w-10 h-10 text-white/90" />
             )}
