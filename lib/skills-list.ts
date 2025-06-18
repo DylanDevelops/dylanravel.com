@@ -1,4 +1,15 @@
-import { KanbanSquareIcon } from "lucide-react";
+import {
+  BrainCogIcon,
+  HourglassIcon,
+  KanbanSquareIcon,
+  MegaphoneIcon,
+  MessageCircleQuestionIcon,
+  PuzzleIcon,
+  UserRoundSearchIcon,
+  Users2Icon,
+  ViewIcon,
+  WaypointsIcon,
+} from "lucide-react";
 
 import { SkillProps } from "./types/skill";
 
@@ -11,53 +22,53 @@ export const softSkills: SkillProps[] = [
   },
   {
     name: "Team Collaboration",
-    icon: KanbanSquareIcon,
+    icon: Users2Icon,
     description:
       "Experienced in working effectively within cross-functional teams, fostering open communication and shared problem-solving.",
   },
   {
     name: "Creative Thinking",
-    icon: KanbanSquareIcon,
+    icon: BrainCogIcon,
     description:
       "Adept at generating innovative ideas and solutions for design, development, and user experience challenges.",
   },
   {
     name: "Adaptability",
-    icon: KanbanSquareIcon,
+    icon: WaypointsIcon,
     description: "Quick to learn new technologies and adapt to changing project requirements or creative directions.",
   },
   {
     name: "Communication",
-    icon: KanbanSquareIcon,
+    icon: MegaphoneIcon,
     description:
       "Strong written and verbal communication skills for articulating technical concepts to diverse audiences.",
   },
   {
     name: "Problem Solving",
-    icon: KanbanSquareIcon,
+    icon: PuzzleIcon,
     description:
       "Proficient at analyzing complex issues and developing effective, efficient solutions in programming and design.",
   },
   {
     name: "Time Management",
-    icon: KanbanSquareIcon,
+    icon: HourglassIcon,
     description:
       "Efficient at prioritizing tasks and managing deadlines in fast-paced development and creative environments.",
   },
   {
     name: "Attention to Detail",
-    icon: KanbanSquareIcon,
+    icon: ViewIcon,
     description: "Meticulous in reviewing code, designs, and assets to ensure high quality and consistency.",
   },
   {
     name: "User-Centered Mindset",
-    icon: KanbanSquareIcon,
+    icon: UserRoundSearchIcon,
     description:
       "Focused on understanding user needs and delivering intuitive, engaging experiences in software and design.",
   },
   {
     name: "Feedback Receptiveness",
-    icon: KanbanSquareIcon,
+    icon: MessageCircleQuestionIcon,
     description:
       "Open to constructive criticism and able to iterate on work based on feedback from peers and stakeholders.",
   },
@@ -76,7 +87,7 @@ export const hardSkills: SkillProps[] = [
   },
   {
     name: "C++",
-    icon: "/icons/cpp.svg",
+    icon: "/icons/cplusplus.svg",
     description: "Skilled in C++ for high-performance applications and game development, including Unreal Engine.",
   },
   {
@@ -111,7 +122,7 @@ export const hardSkills: SkillProps[] = [
   },
   {
     name: "Unreal Engine",
-    icon: "/icons/unreal.svg",
+    icon: "/icons/unreal-engine.svg",
     description: "Creates high-fidelity games and simulations with Unreal Engine and Blueprints.",
   },
   {
@@ -120,10 +131,14 @@ export const hardSkills: SkillProps[] = [
     description: "Designs and animates 3D models and assets using Blender.",
   },
   {
-    name: "Git/GitHub",
+    name: "Git",
+    icon: "/icons/git.svg",
+    description: "Uses Git for version control, branching, and collaborative software development.",
+  },
+  {
+    name: "GitHub",
     icon: "/icons/github.svg",
-    description:
-      "Experienced in using Git and GitHub for version control, collaboration, and managing codebases efficiently.",
+    description: "Manages repositories, code reviews, and project collaboration using GitHub.",
   },
   {
     name: "Node.js",
@@ -148,6 +163,7 @@ export const hardSkills: SkillProps[] = [
   {
     name: "Adobe Products",
     icon: "/icons/adobe.svg",
-    description: "Skilled in Photoshop, Illustrator, and other Adobe Creative Cloud tools for graphic and UI design.",
+    description:
+      "Skilled in Photoshop, Premiere Pro, Illustrator, and other Adobe Creative Cloud tools for graphic and UI design.",
   },
 ];
