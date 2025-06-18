@@ -21,10 +21,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: DomainURL,
+    title: `${ProfileInformation.FullName} - Portfolio`,
     images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: `${ProfileInformation.FullName} - Portfolio`,
     images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
   },
 };

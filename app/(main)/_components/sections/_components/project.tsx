@@ -10,7 +10,7 @@ const Project = ({
   thumbnailUrl = `/projects/${title
     .toLowerCase()
     .replace(/[^a-z0-9 ]/gi, "")
-    .replaceAll(" ", "-")}.png`,
+    .replaceAll(" ", "-")}.webp`,
   date,
   description,
   tags,
@@ -28,7 +28,7 @@ const Project = ({
           width={1920}
           height={1080}
           alt={`The thumbnail for a project called "${title}"`}
-          className="w-64 sm:w-48 h-full rounded-lg"
+          className="w-64 sm:w-48 aspect-16/9 h-full rounded-lg"
         />
         <div className="flex flex-col">
           <p className="text-white/90">
@@ -70,7 +70,7 @@ const Project = ({
                     target="_blank"
                     className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <Globe className="w-4 h-4" />
+                    <Globe className="w-4 h-4" aria-label="Website Icon" />
                   </Link>
                 )}
                 {itchLink && (
