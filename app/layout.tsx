@@ -4,30 +4,30 @@ import "./globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-import { ProfileInformation } from "@/lib/branding";
+import { PortfolioConstants } from "@/lib/branding";
 import { DomainURL } from "@/lib/links";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DomainURL),
-  title: `${ProfileInformation.FullName} - Portfolio`,
-  description: `A portfolio website containing skills, projects, and more by ${ProfileInformation.FullName}.`,
+  title: `${PortfolioConstants.FullName} - Portfolio`,
+  description: `A portfolio website containing skills, projects, and more by ${PortfolioConstants.FullName}.`,
   icons: {
     icon: [
       {
-        url: ProfileInformation.Headshots[1],
-        href: ProfileInformation.Headshots[1],
+        url: PortfolioConstants.Headshots[1],
+        href: PortfolioConstants.Headshots[1],
       },
     ],
   },
   openGraph: {
     type: "website",
     url: DomainURL,
-    title: `${ProfileInformation.FullName} - Portfolio`,
+    title: `${PortfolioConstants.FullName} - Portfolio`,
     images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${ProfileInformation.FullName} - Portfolio`,
+    title: `${PortfolioConstants.FullName} - Portfolio`,
     images: [{ url: "/meta-images/dylanravel-com.png", alt: "A picture reading 'DYLAN RAVEL - Portfolio Website'" }],
   },
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className="bg-[#202020] overflow-x-clip">{children}</body>
-      <GoogleAnalytics gaId={ProfileInformation.GoogleAnalyticsTag} />
+      <GoogleAnalytics gaId={PortfolioConstants.GoogleAnalyticsTag} />
     </html>
   );
 }

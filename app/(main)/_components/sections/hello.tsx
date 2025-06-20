@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 import "./_components/hello.css";
 
-import { ProfileInformation } from "@/lib/branding";
+import { PortfolioConstants } from "@/lib/branding";
 
 const Hello = () => {
-  const headerText = `Hi, I'm ${ProfileInformation.FirstName}!`.split("");
+  const headerText = `Hi, I'm ${PortfolioConstants.FirstName}!`.split("");
   const wavingEmoji = "👋";
 
   return (

@@ -1,6 +1,6 @@
 import { CodeXmlIcon } from "lucide-react";
 
-export const ProfileInformation = {
+export const PortfolioConstants = {
   FirstName: "Dylan",
   LastName: "Ravel",
   get FullName() {
