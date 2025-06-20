@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { MenuIcon } from "lucide-react";
 
-import { ProfileInformation } from "@/lib/branding";
+import { PortfolioConstants } from "@/lib/branding";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -101,7 +101,7 @@ const Navbar = () => {
           href="/"
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-4 pr-4 rounded-l-[3.125rem] duration-200 transition-colors"
         >
-          <ProfileInformation.Logo className="text-white w-8 h-8" aria-label="Go Home" />
+          <PortfolioConstants.Logo className="text-white w-8 h-8" aria-label="Go Home" />
         </Link>
         <Link
           href="/#about"
@@ -142,7 +142,7 @@ const Navbar = () => {
             )}
           >
             <div className="flex flex-row w-min frosted-glass-card p-5 gap-6 items-center">
-              <ProfileInformation.Logo className="text-white w-6 h-6" aria-label="Go Home" />
+              <PortfolioConstants.Logo className="text-white w-6 h-6" aria-label="Go Home" />
             </div>
           </Link>
           <motion.div
