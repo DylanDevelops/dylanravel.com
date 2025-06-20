@@ -8,6 +8,7 @@ import { ProfileInformation } from "@/lib/branding";
 import { DomainURL } from "@/lib/links";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(DomainURL),
   title: `${ProfileInformation.FullName} - Portfolio`,
   description: `A portfolio website containing skills, projects, and more by ${ProfileInformation.FullName}.`,
   icons: {
