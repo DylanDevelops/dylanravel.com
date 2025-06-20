@@ -24,7 +24,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: url("/backgrounds/noise.png") 0% 0% / 200px 200px repeat;
+  background: url("/backgrounds/noise.webp") 0% 0% / 200px 200px repeat;
   opacity: 0.05;
   z-index: 1;
   border-radius: inherit;
