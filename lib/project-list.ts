@@ -8,6 +8,7 @@ export const projectList: ProjectProps[] = [
       "Created by a team of two and inspired by GeoGuessr, PantherGuessr is a locational identification game where users must guess where photos were taken around Chapman University's campus. While still a work in progress, it has shown immense popularity by testers.",
     tags: [ProjectTag.Website, ProjectTag.Game, ProjectTag.Team],
     githubLink: "https://github.com/PantherGuessr/PantherGuessr",
+    websiteLink: "https://pantherguessr.com",
   },
   {
     title: "AIdentify",
