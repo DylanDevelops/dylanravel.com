@@ -3,6 +3,11 @@ import { CodeXmlIcon } from "lucide-react";
 export const PortfolioConstants = {
   FirstName: "Dylan",
   LastName: "Ravel",
+  Company: {
+    Name: "Ravision Tech",
+    LegalName: "Ravision Tech LLC",
+    URL: "https://ravisiontech.com",
+  },
   get FullName() {
     return `${this.FirstName} ${this.LastName}`;
   },

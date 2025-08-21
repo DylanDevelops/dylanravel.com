@@ -1,5 +1,6 @@
 import {
   BrainCogIcon,
+  BriefcaseBusinessIcon,
   HourglassIcon,
   KanbanSquareIcon,
   MegaphoneIcon,
@@ -25,6 +26,12 @@ export const softSkills: SkillProps[] = [
     icon: Users2Icon,
     description:
       "Experienced in working effectively within cross-functional teams, fostering open communication and shared problem-solving.",
+  },
+  {
+    name: "Entrepreneurship",
+    icon: BriefcaseBusinessIcon,
+    description:
+      "Founded and manage Ravision Tech LLC, developing business strategies and leading innovative technology projects from concept to execution.",
   },
   {
     name: "Creative Thinking",

@@ -1,3 +1,5 @@
+import { PortfolioConstants } from "@/lib/branding";
+
 const About = () => {
   return (
     <section id="about" className="flex flex-col gap-2 scroll-mt-10">
@@ -8,15 +10,15 @@ const About = () => {
           technology and storytelling come together in my studies.
         </p>
         <p>
-          A lifelong love for video games inspired me to pursue a major in Computer Science and a minor in Game
-          Development Programming. This allows me to build the immersive worlds I grew up exploring and use technology
-          for good. As an Undergraduate Research Assistant, I am privileged to develop tools for equitable and
-          accessible technological access for blind and visually impaired students.
+          My lifelong love for video games inspired me to pursue Computer Science and Game Development Programming. This
+          passion led me to found {PortfolioConstants.Company.LegalName}, where I'm building innovative solutions at the
+          intersection of technology and creativity.
         </p>
         <p>
-          When I'm not coding, I'm probably snowboarding, hiking, or indulging my creative side through screenwriting
-          and acting. I enjoy playing a good card game with friends or spending time with my cat, Yonder.
+          I also work as an Undergraduate Research Assistant, developing tools for equitable and accessible technology
+          access for blind and visually impaired students.
         </p>
+        <p>When I'm not coding, I enjoy snowboarding, hiking, screenwriting, and spending time with my cat, Yonder.</p>
       </div>
     </section>
   );
