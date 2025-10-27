@@ -1,4 +1,13 @@
-import { Gamepad2Icon, GlobeIcon, LucideIcon, TrophyIcon, UserIcon, UsersIcon, WrenchIcon } from "lucide-react";
+import {
+  Gamepad2Icon,
+  GlobeIcon,
+  LucideIcon,
+  SmartphoneIcon,
+  TrophyIcon,
+  UserIcon,
+  UsersIcon,
+  WrenchIcon,
+} from "lucide-react";
 
 /**
  * Represents the various tags that can be associated with a project.
@@ -6,6 +15,7 @@ import { Gamepad2Icon, GlobeIcon, LucideIcon, TrophyIcon, UserIcon, UsersIcon, W
  * @enum {string}
  * @property {string} Game - Indicates the project is a game.
  * @property {string} Website - Indicates the project is a website.
+ * @property {string} App - Indicates the project is an app.
  * @property {string} Tool - Indicates the project is a tool.
  * @property {string} Solo - Indicates the project was completed solo.
  * @property {string} Team - Indicates the project was completed as part of a team.
@@ -14,6 +24,7 @@ import { Gamepad2Icon, GlobeIcon, LucideIcon, TrophyIcon, UserIcon, UsersIcon, W
 export enum ProjectTag {
   Game = "game",
   Website = "website",
+  App = "app",
   Tool = "tool",
   Solo = "solo",
   Team = "team",
@@ -39,6 +50,7 @@ export enum ProjectTag {
  */
 export const ProjectTagIcons: { [projectTag: string]: LucideIcon } = {
   game: Gamepad2Icon,
+  app: SmartphoneIcon,
   website: GlobeIcon,
   tool: WrenchIcon,
   solo: UserIcon,
