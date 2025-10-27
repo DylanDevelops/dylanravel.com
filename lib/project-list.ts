@@ -11,6 +11,14 @@ export const projectList: ProjectProps[] = [
     websiteLink: "https://pantherguessr.com",
   },
   {
+    title: "Cloudr",
+    date: "2025",
+    description:
+      "Cloudr is your thought cloud companion. Save ideas, notes, reminders, and events easily through a sleek and intuitive chat experience. Created at the CalHacks 12.0 hackathon, Cloudr uses Swift and Anthropic's Claude Haiku 4.5 to intelligently classify user input into the appropriate category, whether that's a note, task, or event. The app features voice and camera input, Apple Calendar integration, and an intuitive sorting interface for organizing unsorted items through simple swipe gestures.",
+    tags: [ProjectTag.App, ProjectTag.Team],
+    websiteLink: "https://devpost.com/software/cloudr",
+  },
+  {
     title: "AIdentify",
     date: "2024 - 2025",
     description:
