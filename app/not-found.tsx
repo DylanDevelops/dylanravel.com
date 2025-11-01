@@ -3,13 +3,17 @@ import "@/components/css/frosted-glass.css";
 import Link from "next/link";
 import { HomeIcon, SignpostIcon } from "lucide-react";
 
+import FloatingShapes from "./(main)/_components/floating-shapes";
 import Footer from "./(main)/_components/footer";
 import Navbar from "./(main)/_components/navbar";
 
 const NotFound = () => {
   return (
-    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#202020] bg-[url('/backgrounds/shapes.webp')] bg-repeat bg-[length:600px_600px]">
-      <div className="absolute inset-0 bg-[#202020]/80 pointer-events-none z-0" />
+    <div className="relative w-screen min-h-screen flex flex-col p-0 m-0 bg-[#202020]">
+      <FloatingShapes />
+
+      <div className="absolute inset-0 bg-[#202020]/70 pointer-events-none z-0" />
+
       <main className="md:relative flex flex-col gap-2 flex-1 justify-center items-center space-y-2 p-4 z-10">
         <Navbar />
         <div className="flex flex-col items-center max-w-[60rem] frosted-glass-card p-10 gap-6">
