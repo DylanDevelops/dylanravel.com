@@ -1,15 +1,25 @@
 import {
+  BrainCircuitIcon,
   BrainCogIcon,
   BriefcaseBusinessIcon,
+  DatabaseIcon,
+  GraduationCapIcon,
+  HandshakeIcon,
   HourglassIcon,
   KanbanSquareIcon,
   MegaphoneIcon,
   MessageCircleQuestionIcon,
   PuzzleIcon,
+  SearchCheckIcon,
+  SquareKanbanIcon,
+  ToolCaseIcon,
   UserRoundSearchIcon,
   Users2Icon,
+  UsersRoundIcon,
   ViewIcon,
   WaypointsIcon,
+  WebhookIcon,
+  WorkflowIcon,
 } from "lucide-react";
 
 import { SkillProps } from "./types/skill";
@@ -22,16 +32,46 @@ export const softSkills: SkillProps[] = [
       "Skilled in planning, organizing, and overseeing projects to ensure timely delivery, effective collaboration, and achievement of objectives.",
   },
   {
+    name: "Technical Leadership",
+    icon: UsersRoundIcon,
+    description:
+      "Leads development teams and manages technical direction, having spearheaded programming for 50,000+ download VR game demo and led teams of 6+ developers.",
+  },
+  {
+    name: "Agile/Scrum",
+    icon: SquareKanbanIcon,
+    description:
+      "Manages projects using Agile methodologies and Scrum frameworks to ensure iterative delivery and team alignment.",
+  },
+  {
     name: "Team Collaboration",
     icon: Users2Icon,
     description:
       "Experienced in working effectively within cross-functional teams, fostering open communication and shared problem-solving.",
   },
   {
+    name: "Mentorship",
+    icon: GraduationCapIcon,
+    description:
+      "Guides junior developers and new developers through code reviews, workshops, and collaborative learning.",
+  },
+  {
+    name: "Cross-Disciplinary Collaboration",
+    icon: ToolCaseIcon,
+    description:
+      "Bridges technical and creative domains, bringing theatre arts experience to collaborative software development.",
+  },
+  {
     name: "Entrepreneurship",
     icon: BriefcaseBusinessIcon,
     description:
       "Founded and manage Ravision Tech LLC, developing business strategies and leading innovative technology projects from concept to execution.",
+  },
+  {
+    name: "Client Relations",
+    icon: HandshakeIcon,
+    description:
+      "Manages client communications, project scoping, and invoicing for Ravision Tech LLC's web development and game projects.",
   },
   {
     name: "Creative Thinking",
@@ -68,6 +108,12 @@ export const softSkills: SkillProps[] = [
     description: "Meticulous in reviewing code, designs, and assets to ensure high quality and consistency.",
   },
   {
+    name: "Code Review & QA",
+    icon: SearchCheckIcon,
+    description:
+      "Implements robust code review processes to ensure high-quality, performant, and maintainable codebases.",
+  },
+  {
     name: "User-Centered Mindset",
     icon: UserRoundSearchIcon,
     description:
@@ -98,6 +144,11 @@ export const hardSkills: SkillProps[] = [
     description: "Skilled in C++ for high-performance applications and game development, including Unreal Engine.",
   },
   {
+    name: "Swift",
+    icon: "/icons/swift.svg",
+    description: "Builds native iOS applications with Swift, including integration with Apple frameworks and APIs.",
+  },
+  {
     name: "React",
     icon: "/icons/react.svg",
     description: "Develops dynamic and responsive user interfaces with React and related libraries.",
@@ -106,6 +157,11 @@ export const hardSkills: SkillProps[] = [
     name: "HTML/CSS",
     icon: "/icons/htmlcss.svg",
     description: "Expertise in crafting semantic, accessible, and visually appealing web pages using HTML and CSS.",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "/icons/tailwindcss.svg",
+    description: "Rapidly builds responsive, modern interfaces using Tailwind's utility-first CSS framework.",
   },
   {
     name: "TypeScript",
@@ -148,9 +204,41 @@ export const hardSkills: SkillProps[] = [
     description: "Manages repositories, code reviews, and project collaboration using GitHub.",
   },
   {
+    name: "CI/CD Pipelines",
+    icon: WorkflowIcon,
+    description: "Implements automated testing and deployment workflows using GitHub Actions and other CI/CD tools.",
+  },
+  {
     name: "Node.js",
     icon: "/icons/nodejs.svg",
     description: "Builds scalable backend services and APIs with Node.js.",
+  },
+  {
+    name: "Google Firebase",
+    icon: "/icons/firebase.svg",
+    description: "Leverages Firebase for authentication, real-time databases, cloud storage, and serverless functions.",
+  },
+  {
+    name: "Convex",
+    icon: "/icons/convex.svg",
+    description:
+      "Architects reactive backend systems using Convex for real-time data synchronization and serverless functions.",
+  },
+  {
+    name: "SQL",
+    icon: DatabaseIcon,
+    description: "Designs and queries relational databases using SQL for data management and analysis.",
+  },
+  {
+    name: "REST APIs",
+    icon: WebhookIcon,
+    description: "Designs and implements RESTful APIs for scalable client-server communication.",
+  },
+  {
+    name: "LLM APIs",
+    icon: BrainCircuitIcon,
+    description:
+      "Integrates large language model APIs (Claude, OpenAI) to build AI-powered features and intelligent applications.",
   },
   {
     name: "Python",
