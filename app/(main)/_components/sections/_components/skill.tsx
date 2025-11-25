@@ -44,7 +44,7 @@ const Skill = ({
                 draggable={false}
               />
             ) : (
-              <IconComponent className="w-10 h-10 text-white/90" />
+              <IconComponent className="w-10 h-10 text-white" />
             )}
           </motion.div>
         )}
