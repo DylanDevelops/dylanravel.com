@@ -1,10 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useMemo } from "react";
+import { motion } from "framer-motion";
 
 const FloatingShapes = () => {
-  // Generate random positions and movement on each mount for dynamic placement
   const shapes = useMemo(() => {
     const baseShapes = [
       {
@@ -63,28 +62,23 @@ const FloatingShapes = () => {
       },
     ];
 
-    return baseShapes.map((shape) => ({
-      ...shape,
-      initialX: Math.random() * 90, // Random position 0-90%
-      initialY: Math.random() * 90, // Random position 0-90%
-      // Randomize movement patterns for more organic, flowy motion
-      moveX: [
-        0,
-        (Math.random() - 0.5) * 400, // -200 to 200
-        (Math.random() - 0.5) * 320,  // -160 to 160
-        (Math.random() - 0.5) * 480, // -240 to 240
-        0,
-      ],
-      moveY: [
-        0,
-        (Math.random() - 0.5) * 400,
-        (Math.random() - 0.5) * 320,
-        (Math.random() - 0.5) * 480,
-        0,
-      ],
-      duration: 12 + Math.random() * 10, // 12-22 seconds (faster for more visible movement)
-      delay: Math.random() * 5, // 0-5 second delay
-    }));
+    return baseShapes.map((shape, index) => {
+      const section = Math.floor(index / 3);
+      const sectionStart = section * 33;
+      const sectionEnd = sectionStart + 33;
+
+      return {
+        ...shape,
+        initialX: sectionStart + Math.random() * (sectionEnd - sectionStart),
+        initialY: Math.random() * 90,
+
+        // Randomize movement patterns for more organic, flowy motion
+        moveX: [0, (Math.random() - 0.5) * 400, (Math.random() - 0.5) * 320, (Math.random() - 0.5) * 480, 0],
+        moveY: [0, (Math.random() - 0.5) * 400, (Math.random() - 0.5) * 320, (Math.random() - 0.5) * 480, 0],
+        duration: 12 + Math.random() * 10,
+        delay: Math.random() * 5,
+      };
+    });
   }, []);
 
   return (
