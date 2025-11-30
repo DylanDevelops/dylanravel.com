@@ -51,7 +51,7 @@ const FloatingShapes = () => {
       {shapes.map((shape) => (
         <motion.div
           key={shape.id}
-          className={`absolute rounded-full ${shape.color} ${shape.size} ${shape.blur} opacity-20`}
+          className={`absolute rounded-full ${shape.color} ${shape.size} ${shape.blur} opacity-100`}
           style={{
             left: shape.initialX,
             top: shape.initialY,
