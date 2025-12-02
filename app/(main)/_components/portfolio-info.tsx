@@ -12,8 +12,9 @@ const PortfolioInfo = () => {
         <Image
           src={PortfolioConstants.Headshots[0]}
           unoptimized
-          width={1}
-          height={1}
+          width={192}
+          height={192}
+          priority
           alt={`A picture of ${PortfolioConstants.FullName}`}
           className="w-48 h-48 rounded-4xl"
         />

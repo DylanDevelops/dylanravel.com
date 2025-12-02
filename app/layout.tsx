@@ -40,8 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="bg-[#202020] overflow-x-clip">{children}</body>
-      <GoogleAnalytics gaId={PortfolioConstants.GoogleAnalyticsTag} />
+      <body className="bg-[#202020] overflow-x-clip">
+        {children}
+        <GoogleAnalytics gaId={PortfolioConstants.GoogleAnalyticsTag} />
+      </body>
     </html>
   );
 }
