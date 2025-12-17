@@ -2,6 +2,14 @@ import { ProjectProps, ProjectTag } from "./types/project";
 
 export const projectList: ProjectProps[] = [
   {
+    title: "tmpo",
+    date: "2025 - PRESENT",
+    description:
+      "tmpo is a terminal-native time tracker that auto-detects your project from Git or config files. Start and stop timers with simple commands, view stats, and export data without ever leaving your workspace.",
+    tags: [ProjectTag.Tool, ProjectTag.Solo],
+    githubLink: "https://github.com/DylanDevelops/tmpo",
+  },
+  {
     title: "PantherGuessr",
     date: "2024 - PRESENT",
     description:
