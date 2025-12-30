@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 import { hardSkills, softSkills } from "@/lib/skills-list";
 import { SkillProps } from "@/lib/types/skill";
@@ -24,7 +23,7 @@ const Skills = () => {
       <div className="flex flex-col gap-8 mt-2">
         <div className="flex flex-col gap-2">
           <h3 className="text-white font-bold text-xl">Technical Skills</h3>
-          <motion.div layout className="flex flex-wrap gap-2 items-start">
+          <div className="flex flex-wrap gap-2 items-start">
             {hardSkills.map((skill) => (
               <Skill
                 key={skill.name}
@@ -33,11 +32,11 @@ const Skills = () => {
                 onClick={handleSkillClick}
               />
             ))}
-          </motion.div>
+          </div>
         </div>
         <div className="flex flex-col gap-2">
           <h3 className="text-white font-bold text-xl">Soft Skills</h3>
-          <motion.div layout className="flex flex-wrap gap-2 items-start">
+          <div className="flex flex-wrap gap-2 items-start">
             {softSkills.map((skill) => (
               <Skill
                 key={skill.name}
@@ -46,7 +45,7 @@ const Skills = () => {
                 onClick={handleSkillClick}
               />
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
