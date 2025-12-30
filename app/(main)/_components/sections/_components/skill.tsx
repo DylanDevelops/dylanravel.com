@@ -21,7 +21,7 @@ const Skill = ({
       layout="position"
       onClick={() => onClick(skill)}
       transition={{
-        layout: { type: "spring", stiffness: 400, damping: 35 }
+        layout: { type: "spring", stiffness: 400, damping: 35 },
       }}
       className={cn(
         "border border-white/40 hover:bg-white/10 transition-colors select-none cursor-pointer",
@@ -54,9 +54,7 @@ const Skill = ({
           )}
         </AnimatePresence>
         <div className="flex flex-col justify-center min-w-0 flex-1">
-          <h3 className={cn("text-white/80", isSelected ? "font-bold text-lg" : "text-sm")}>
-            {skill.name}
-          </h3>
+          <h3 className={cn("text-white/80", isSelected ? "font-bold text-lg" : "text-sm")}>{skill.name}</h3>
           <AnimatePresence initial={false} mode="popLayout">
             {isSelected && (
               <motion.p
