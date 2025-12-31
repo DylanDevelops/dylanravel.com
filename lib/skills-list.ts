@@ -139,6 +139,12 @@ export const hardSkills: SkillProps[] = [
     description: "Experienced in building robust backend systems and Android applications using Java.",
   },
   {
+    name: "Go",
+    icon: "/icons/go.svg",
+    description:
+      "Built a CLI time-tracking tool and other command-line utilities in Go, leveraging its concurrency and performance for efficient tooling (and occasional backend services).",
+  },
+  {
     name: "C++",
     icon: "/icons/cplusplus.svg",
     description: "Skilled in C++ for high-performance applications and game development, including Unreal Engine.",
