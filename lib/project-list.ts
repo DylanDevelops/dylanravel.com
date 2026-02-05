@@ -42,7 +42,7 @@ export const projectList: ProjectProps[] = [
       "Using Next.js, Tailwind, and TypeScript, the website for Chapman University's first student-run hackathon was created. The team consisted of 4 members, two programmers and two designers, who worked diligently to bring to life an event website that inspired students to create innovative projects.",
     tags: [ProjectTag.Website, ProjectTag.Team],
     githubLink: "https://github.com/pantherhacks/pantherhacks.dev",
-    websiteLink: "https://pantherhacks.dev",
+    websiteLink: "https://2025.pantherhacks.dev",
   },
   {
     title: "Room Spin!",
