@@ -67,6 +67,7 @@ export const ProjectTagIcons: { [projectTag: string]: LucideIcon } = {
  * @property description - A brief description of the project.
  * @property tags - (Optional) An array of tags or filters associated with the project.
  * @property githubLink - (Optional) The URL to the project's GitHub repository.
+ * @property showGitHubStars - (Optional) If true, display GitHub star count for this project.
  * @property websiteLink - (Optional) The URL to the project's website.
  * @property itchLink - (Optional) The URL to the project's itch.io page.
  * @property steamLink - (Optional) The URL to the project's Steam page.
@@ -78,6 +79,7 @@ export type ProjectProps = {
   description: string;
   tags?: ProjectTag[];
   githubLink?: string;
+  showGitHubStars?: boolean;
   websiteLink?: string;
   itchLink?: string;
   steamLink?: string;

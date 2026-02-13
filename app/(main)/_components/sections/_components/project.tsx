@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Globe } from "lucide-react";
+import { GlobeIcon, StarIcon } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
+import { useGitHubStars } from "@/lib/hooks/use-github-stars";
 import { ProjectProps } from "@/lib/types/project";
 
 const Project = ({
@@ -15,10 +16,12 @@ const Project = ({
   description,
   tags,
   githubLink,
+  showGitHubStars = false,
   websiteLink,
   itchLink,
   steamLink,
 }: ProjectProps) => {
+  const { stars, loading } = useGitHubStars(githubLink, showGitHubStars);
   return (
     <>
       <div className="flex flex-col sm:flex-row gap-4 text-white/80 pb-4">
@@ -35,6 +38,12 @@ const Project = ({
             <span className="font-bold text-lg">{title}</span> ({date})
           </p>
           <p>{description}</p>
+          {showGitHubStars && stars !== null && (
+            <div className="flex flex-row items-center gap-1 text-xs text-white/50 mt-1">
+              <StarIcon className="w-3 h-3 text-white/50" />
+              <span>{stars.toLocaleString()}+ stars on GitHub</span>
+            </div>
+          )}
           <div className="flex flex-col gap-2 lg:flex-row justify-between">
             {tags && (
               <ul className="flex flex-row flex-wrap gap-2 mt-2 text-xs text-white/60">
@@ -46,7 +55,7 @@ const Project = ({
               </ul>
             )}
             {(githubLink || websiteLink || itchLink || steamLink) && (
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-2 items-center">
                 {githubLink && (
                   <Link
                     href={githubLink}
@@ -70,7 +79,7 @@ const Project = ({
                     target="_blank"
                     className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
                   >
-                    <Globe className="w-4 h-4" aria-label="Website Icon" />
+                    <GlobeIcon className="w-4 h-4" aria-label="Website Icon" />
                   </Link>
                 )}
                 {itchLink && (
