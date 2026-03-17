@@ -27,6 +27,11 @@ const Navbar = () => {
     setIsScrollingAfterClick(true);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setShowNav(true);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -99,6 +104,7 @@ const Navbar = () => {
       <div className="hidden sm:flex flex-row max-w-[60rem] frosted-glass-card items-center mx-auto mt-4">
         <Link
           href="/"
+          onClick={handleLogoClick}
           className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-4 pr-4 rounded-l-[3.125rem] duration-200 transition-colors"
         >
           <PortfolioConstants.Logo className="text-white w-8 h-8" aria-label="Go Home" />
@@ -136,6 +142,7 @@ const Navbar = () => {
         <div className="flex flex-row justify-between items-start w-full max-w-[60rem] px-6">
           <Link
             href="/"
+            onClick={handleLogoClick}
             className={cn(
               "text-white font-bold rounded-full hover:bg-white/10 transition-colors duration-200",
               showNav ?? "shadow-lg"
