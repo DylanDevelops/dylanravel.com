@@ -43,7 +43,7 @@ export const projectList: ProjectProps[] = [
       "AIdentify, winning first place in the Technology/Education category at Chapman University's Spring 2025 Grand Challenges Initiative Showcase, focuses on teaching AI identification through repetition. By letting users play fun, interactive levels where they must spot the difference between AI and human-generated content, users learn important recognition skills that help them look at the media they see daily through a skeptical lens.",
     tags: [ProjectTag.Website, ProjectTag.Game, ProjectTag.Team, ProjectTag.Awards],
     githubLink: "https://github.com/DylanDevelops/aidentify",
-    websiteLink: "https://playaidentify.com",
+    websiteLink: "https://aidentify.dylanravel.com",
   },
   {
     title: "PantherHacks 2025",
