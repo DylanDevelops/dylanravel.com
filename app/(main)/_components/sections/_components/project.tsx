@@ -24,29 +24,29 @@ const Project = ({
   const { stars, loading } = useGitHubStars(githubLink, showGitHubStars);
   return (
     <>
-      <div className="flex flex-col sm:flex-row gap-4 text-white/80 pb-4">
+      <div className="flex flex-col gap-4 pb-4 text-white/80 sm:flex-row">
         <Image
           src={thumbnailUrl}
           unoptimized
           width={1920}
           height={1080}
           alt={`The thumbnail for a project called "${title}"`}
-          className="w-64 sm:w-48 aspect-16/9 h-full rounded-lg"
+          className="aspect-16/9 h-full w-64 rounded-lg sm:w-48"
         />
         <div className="flex flex-col">
           <p className="text-white/90">
-            <span className="font-bold text-lg">{title}</span> ({date})
+            <span className="text-lg font-bold">{title}</span> ({date})
           </p>
           <p>{description}</p>
           {showGitHubStars && stars !== null && (
-            <div className="flex flex-row items-center gap-1 text-xs text-white/50 mt-1">
-              <StarIcon className="w-3 h-3 text-white/50" />
+            <div className="mt-1 flex flex-row items-center gap-1 text-xs text-white/50">
+              <StarIcon className="h-3 w-3 text-white/50" />
               <span>{stars.toLocaleString()}+ stars on GitHub</span>
             </div>
           )}
-          <div className="flex flex-col gap-2 lg:flex-row justify-between">
+          <div className="flex flex-col justify-between gap-2 lg:flex-row">
             {tags && (
-              <ul className="flex flex-row flex-wrap gap-2 mt-2 text-xs text-white/60">
+              <ul className="mt-2 flex flex-row flex-wrap gap-2 text-xs text-white/60">
                 {tags.map((filter) => (
                   <li key={filter} className="whitespace-nowrap">
                     [ {filter} ]
@@ -55,17 +55,17 @@ const Project = ({
               </ul>
             )}
             {(githubLink || websiteLink || itchLink || steamLink) && (
-              <div className="flex flex-row gap-2 items-center">
+              <div className="flex flex-row items-center gap-2">
                 {githubLink && (
                   <Link
                     href={githubLink}
                     target="_blank"
-                    className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
+                    className="frosted-glass-button rounded-full p-1 text-white transition-all duration-200 hover:scale-110"
                   >
                     <Image
                       src="/icons/github.svg"
                       alt="GitHub Logo"
-                      className="w-4 h-4 select-none"
+                      className="h-4 w-4 select-none"
                       unoptimized
                       width={1}
                       height={1}
@@ -77,21 +77,21 @@ const Project = ({
                   <Link
                     href={websiteLink}
                     target="_blank"
-                    className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
+                    className="frosted-glass-button rounded-full p-1 text-white transition-all duration-200 hover:scale-110"
                   >
-                    <GlobeIcon className="w-4 h-4" aria-label="Website Icon" />
+                    <GlobeIcon className="h-4 w-4" aria-label="Website Icon" />
                   </Link>
                 )}
                 {itchLink && (
                   <Link
                     href={itchLink}
                     target="_blank"
-                    className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
+                    className="frosted-glass-button rounded-full p-1 text-white transition-all duration-200 hover:scale-110"
                   >
                     <Image
                       src="/icons/itch.svg"
                       alt="Itch.io Logo"
-                      className="w-4 h-4 select-none"
+                      className="h-4 w-4 select-none"
                       unoptimized
                       width={1}
                       height={1}
@@ -103,12 +103,12 @@ const Project = ({
                   <Link
                     href={steamLink}
                     target="_blank"
-                    className="frosted-glass-button p-1 rounded-full text-white hover:scale-110 transition-all duration-200"
+                    className="frosted-glass-button rounded-full p-1 text-white transition-all duration-200 hover:scale-110"
                   >
                     <Image
                       src="/icons/steam.svg"
                       alt="Steam Logo"
-                      className="w-4 h-4 select-none"
+                      className="h-4 w-4 select-none"
                       unoptimized
                       width={1}
                       height={1}

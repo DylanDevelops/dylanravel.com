@@ -2,9 +2,9 @@ import { PortfolioConstants } from "@/lib/branding";
 
 const About = () => {
   return (
-    <section id="about" className="flex flex-col gap-2 scroll-mt-10">
-      <h2 className="text-white font-bold text-2xl">About Me</h2>
-      <div className="text-white/80 space-y-4">
+    <section id="about" className="flex scroll-mt-10 flex-col gap-2">
+      <h2 className="text-2xl font-bold text-white">About Me</h2>
+      <div className="space-y-4 text-white/80">
         <p>
           I am originally from Denver, Colorado, and currently an undergraduate at Chapman University. My passions for
           technology and storytelling come together in my studies.

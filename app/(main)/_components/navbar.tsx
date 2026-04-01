@@ -97,64 +97,64 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-full sm:w-auto z-50 transition-transform duration-300 fixed top-0 left-1/2 -translate-x-1/2",
+        "fixed top-0 left-1/2 z-50 w-full -translate-x-1/2 transition-transform duration-300 sm:w-auto",
         showNav ? "translate-y-0" : "-translate-y-[calc(100%+24rem)]"
       )}
     >
-      <div className="hidden sm:flex flex-row max-w-[60rem] frosted-glass-card items-center mx-auto mt-4">
+      <div className="frosted-glass-card mx-auto mt-4 hidden max-w-[60rem] flex-row items-center sm:flex">
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-4 pr-4 rounded-l-[3.125rem] duration-200 transition-colors"
+          className="rounded-l-[3.125rem] border-white/40 bg-transparent px-4 py-4 pr-4 font-bold text-white transition-colors duration-200 hover:bg-white/10"
         >
-          <PortfolioConstants.Logo className="text-white w-8 h-8" aria-label="Go Home" />
+          <PortfolioConstants.Logo className="h-8 w-8 text-white" aria-label="Go Home" />
         </Link>
         <Link
           href="/#about"
           onClick={handleLinkClick}
-          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+          className="border-white/40 bg-transparent px-4 py-5 font-bold text-white transition-colors duration-200 hover:bg-white/10"
         >
           About
         </Link>
         <Link
           href="/#skills"
           onClick={handleLinkClick}
-          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+          className="border-white/40 bg-transparent px-4 py-5 font-bold text-white transition-colors duration-200 hover:bg-white/10"
         >
           Skills
         </Link>
         <Link
           href="/#projects"
           onClick={handleLinkClick}
-          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 duration-200 transition-colors"
+          className="border-white/40 bg-transparent px-4 py-5 font-bold text-white transition-colors duration-200 hover:bg-white/10"
         >
           Projects
         </Link>
         <Link
           href="/#contact"
           onClick={handleLinkClick}
-          className="bg-transparent text-white font-bold px-4 border-white/40 hover:bg-white/10 py-5 pr-4 rounded-r-[3.125rem] duration-200 transition-colors"
+          className="rounded-r-[3.125rem] border-white/40 bg-transparent px-4 py-5 pr-4 font-bold text-white transition-colors duration-200 hover:bg-white/10"
         >
           Contact
         </Link>
       </div>
-      <div className="flex w-full justify-center mt-4 sm:hidden">
-        <div className="flex flex-row justify-between items-start w-full max-w-[60rem] px-6">
+      <div className="mt-4 flex w-full justify-center sm:hidden">
+        <div className="flex w-full max-w-[60rem] flex-row items-start justify-between px-6">
           <Link
             href="/"
             onClick={handleLogoClick}
             className={cn(
-              "text-white font-bold rounded-full hover:bg-white/10 transition-colors duration-200",
+              "rounded-full font-bold text-white transition-colors duration-200 hover:bg-white/10",
               showNav ?? "shadow-lg"
             )}
           >
-            <div className="flex flex-row w-min frosted-glass-card p-5 gap-6 items-center">
-              <PortfolioConstants.Logo className="text-white w-6 h-6" aria-label="Go Home" />
+            <div className="frosted-glass-card flex w-min flex-row items-center gap-6 p-5">
+              <PortfolioConstants.Logo className="h-6 w-6 text-white" aria-label="Go Home" />
             </div>
           </Link>
           <motion.div
             ref={navRef}
-            className={cn("text-white font-bold rounded-full cursor-pointer", showNav ?? "shadow-lg")}
+            className={cn("cursor-pointer rounded-full font-bold text-white", showNav ?? "shadow-lg")}
           >
             <AnimatePresence mode="wait" initial={false}>
               {!mobileMenuOpen && (
@@ -165,10 +165,10 @@ const Navbar = () => {
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.2 }}
                   onClick={() => setMobileMenuOpen(true)}
-                  className="flex flex-row w-min frosted-glass-card gap-6 items-center"
+                  className="frosted-glass-card flex w-min flex-row items-center gap-6"
                 >
-                  <div className="w-min p-5 hover:bg-white/10 transition-colors duration-200 rounded-full">
-                    <MenuIcon className="text-white w-6 h-6" />
+                  <div className="w-min rounded-full p-5 transition-colors duration-200 hover:bg-white/10">
+                    <MenuIcon className="h-6 w-6 text-white" />
                   </div>
                 </motion.div>
               )}
@@ -179,7 +179,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="flex flex-col overflow-hidden frosted-glass-card"
+                  className="frosted-glass-card flex flex-col overflow-hidden"
                 >
                   {["About", "Skills", "Projects", "Contact"].map((link, index) => (
                     <motion.div
@@ -189,14 +189,14 @@ const Navbar = () => {
                       initial="hidden"
                       animate="visible"
                       exit="hidden"
-                      className="w-full hover:bg-white/10 transition-colors duration-200 select-none"
+                      className="w-full transition-colors duration-200 select-none hover:bg-white/10"
                     >
                       <Link
                         href={`/#${link.toLowerCase()}`}
                         className={cn(
-                          "w-full py-2 px-10 flex justify-center",
-                          index === 0 ? "pt-4 rounded-t-[3.125rem]" : "",
-                          index === 3 ? "pb-4 rounded-b-[3.125rem]" : ""
+                          "flex w-full justify-center px-10 py-2",
+                          index === 0 ? "rounded-t-[3.125rem] pt-4" : "",
+                          index === 3 ? "rounded-b-[3.125rem] pb-4" : ""
                         )}
                         onClick={handleMobileLinkClick}
                       >
