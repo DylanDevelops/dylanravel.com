@@ -11,8 +11,8 @@ const Hello = () => {
   const wavingEmoji = "👋";
 
   return (
-    <section id="hello" className="flex flex-col gap-4 scroll-mt-10">
-      <h2 className="text-white font-bold text-3xl md:text-4xl">
+    <section id="hello" className="flex scroll-mt-10 flex-col gap-4">
+      <h2 className="text-3xl font-bold text-white md:text-4xl">
         {headerText.map((char, i) => (
           <motion.span
             initial={{ opacity: 0 }}
@@ -50,7 +50,7 @@ const Hello = () => {
         </motion.span>
       </h2>
       <motion.p
-        className="text-white/80 text-lg font-bold"
+        className="text-lg font-bold text-white/80"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

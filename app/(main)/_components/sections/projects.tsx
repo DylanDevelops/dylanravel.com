@@ -20,13 +20,13 @@ const Projects = () => {
       : projectList.filter((project) => project.tags?.some((tag) => activeFilters.includes(tag)));
 
   return (
-    <section id="projects" className="flex flex-col gap-2 scroll-mt-10">
-      <h2 className="text-white font-bold text-2xl">Projects</h2>
+    <section id="projects" className="flex scroll-mt-10 flex-col gap-2">
+      <h2 className="text-2xl font-bold text-white">Projects</h2>
       <p className="text-white/80">
         Learn about {filteredProjects.length} project{filteredProjects.length > 1 && "s"} that I have worked on. Use the
         buttons below to filter the shown projects.
       </p>
-      <div className="flex flex-wrap gap-2 mb-2">
+      <div className="mb-2 flex flex-wrap gap-2">
         {allTags.map((tag) => {
           const FilterIcon = ProjectTagIcons[tag];
 
@@ -34,10 +34,10 @@ const Projects = () => {
             <button
               key={tag}
               className={cn(
-                "flex flex-row gap-2 items-center px-3 py-1 rounded-full border transition-all select-none cursor-pointer",
+                "flex cursor-pointer flex-row items-center gap-2 rounded-full border px-3 py-1 transition-all select-none",
                 activeFilters.includes(tag)
-                  ? "bg-white text-black border-white"
-                  : "bg-transparent text-white border-white/40 hover:bg-white/10"
+                  ? "border-white bg-white text-black"
+                  : "border-white/40 bg-transparent text-white hover:bg-white/10"
               )}
               onClick={() =>
                 setActiveFilters((filters) =>
@@ -45,16 +45,16 @@ const Projects = () => {
                 )
               }
             >
-              <FilterIcon className="w-4 h-4" /> {tag}
+              <FilterIcon className="h-4 w-4" /> {tag}
             </button>
           );
         })}
         {activeFilters.length > 0 && (
           <button
-            className="flex flex-row items-center gap-2 px-3 py-1 rounded-full border border-white/40 text-white bg-red-600 hover:bg-red-700 transition-all select-none cursor-pointer"
+            className="flex cursor-pointer flex-row items-center gap-2 rounded-full border border-white/40 bg-red-600 px-3 py-1 text-white transition-all select-none hover:bg-red-700"
             onClick={() => setActiveFilters([])}
           >
-            <CircleXIcon className="w-4 h-4" /> Clear Filters
+            <CircleXIcon className="h-4 w-4" /> Clear Filters
           </button>
         )}
       </div>

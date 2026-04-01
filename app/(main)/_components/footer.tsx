@@ -4,7 +4,7 @@ import { PortfolioConstants } from "@/lib/branding";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-row max-w-[60rem] frosted-glass-card p-4 gap-6 items-center">
+    <footer className="frosted-glass-card flex max-w-[60rem] flex-row items-center gap-6 p-4">
       <p className="text-white">
         © {PortfolioConstants.CopyrightYear} by{" "}
         <Link href="/" className="font-bold">

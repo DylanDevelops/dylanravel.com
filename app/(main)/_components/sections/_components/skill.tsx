@@ -24,8 +24,8 @@ const Skill = ({
         layout: { type: "spring", stiffness: 400, damping: 35 },
       }}
       className={cn(
-        "border border-white/40 hover:bg-white/10 transition-colors select-none cursor-pointer",
-        isSelected ? "w-full p-4 bg-white/5 rounded-2xl" : "rounded-full px-2 py-1"
+        "cursor-pointer border border-white/40 transition-colors select-none hover:bg-white/10",
+        isSelected ? "w-full rounded-2xl bg-white/5 p-4" : "rounded-full px-2 py-1"
       )}
     >
       <div className="flex items-center gap-4">
@@ -43,18 +43,18 @@ const Skill = ({
                   alt={`${skill.name} icon`}
                   width={40}
                   height={40}
-                  className="w-10 h-10 select-none"
+                  className="h-10 w-10 select-none"
                   unoptimized
                   draggable={false}
                 />
               ) : (
-                <IconComponent className="w-10 h-10 text-white" />
+                <IconComponent className="h-10 w-10 text-white" />
               )}
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="flex flex-col justify-center min-w-0 flex-1">
-          <h3 className={cn("text-white/80", isSelected ? "font-bold text-lg" : "text-sm")}>{skill.name}</h3>
+        <div className="flex min-w-0 flex-1 flex-col justify-center">
+          <h3 className={cn("text-white/80", isSelected ? "text-lg font-bold" : "text-sm")}>{skill.name}</h3>
           <AnimatePresence initial={false} mode="popLayout">
             {isSelected && (
               <motion.p
@@ -69,7 +69,7 @@ const Skill = ({
                   height: 0,
                   transition: { duration: 0.1 },
                 }}
-                className="text-white/80 mt-1 text-sm overflow-hidden"
+                className="mt-1 overflow-hidden text-sm text-white/80"
               >
                 {skill.description}
               </motion.p>

@@ -82,7 +82,7 @@ const FloatingShapes = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {shapes.map((shape) => (
         <motion.div
           key={shape.id}
