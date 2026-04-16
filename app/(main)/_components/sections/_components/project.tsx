@@ -31,7 +31,7 @@ const Project = ({
           width={1920}
           height={1080}
           alt={`The thumbnail for a project called "${title}"`}
-          className="aspect-16/9 h-full w-64 rounded-lg sm:w-48"
+          className="aspect-16/9 h-full w-full rounded-lg sm:w-48"
         />
         <div className="flex flex-col">
           <p className="text-white/90">
