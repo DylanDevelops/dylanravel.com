@@ -11,15 +11,6 @@ export const projectList: ProjectProps[] = [
     showGitHubStars: true,
   },
   {
-    title: "PantherHacks 2026",
-    date: "2025 - PRESENT",
-    description:
-      "Co-developed the official website for Chapman University’s second student-run hackathon using Next.js, Tailwind CSS, and TypeScript. Working in a tight-knit team alongside another programmer and a UI/UX designer, we built an engaging, high-performance website designed to inspire students and drive participation in innovative tech projects.",
-    tags: [ProjectTag.Website, ProjectTag.Team],
-    githubLink: "https://github.com/pantherhacks/pantherhacks.dev",
-    websiteLink: "https://pantherhacks.dev",
-  },
-  {
     title: "PantherGuessr",
     date: "2024 - PRESENT",
     description:
@@ -27,6 +18,15 @@ export const projectList: ProjectProps[] = [
     tags: [ProjectTag.Website, ProjectTag.Game, ProjectTag.Team],
     githubLink: "https://github.com/PantherGuessr/PantherGuessr",
     websiteLink: "https://pantherguessr.com",
+  },
+  {
+    title: "PantherHacks 2026",
+    date: "2025 - 2026",
+    description:
+      "Co-developed the official website for Chapman University’s second student-run hackathon using Next.js, Tailwind CSS, and TypeScript. Working in a tight-knit team alongside another programmer and a UI/UX designer, we built an engaging, high-performance website designed to inspire students and drive participation in innovative tech projects.",
+    tags: [ProjectTag.Website, ProjectTag.Team],
+    githubLink: "https://github.com/pantherhacks/pantherhacks.dev",
+    websiteLink: "https://pantherhacks.dev",
   },
   {
     title: "Cloudr",
