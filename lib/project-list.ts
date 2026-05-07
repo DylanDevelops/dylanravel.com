@@ -2,6 +2,15 @@ import { ProjectProps, ProjectTag } from "./types/project";
 
 export const projectList: ProjectProps[] = [
   {
+    title: "Ravision Tech Website",
+    date: "2025 - PRESENT",
+    description:
+      "Founded July 2025 in Denver, CO, Ravision Tech LLC builds sites worth staring at. Specializing in Web Development, Design, E-Commerce, and SEO Optimization, we build fast and modern websites that are built to scale.",
+    tags: [ProjectTag.Website, ProjectTag.Solo],
+    githubLink: "https://github.com/ravision-tech/ravisiontech.com",
+    websiteLink: "https://ravisiontech.com",
+  },
+  {
     title: "tmpo",
     date: "2025 - PRESENT",
     description:
