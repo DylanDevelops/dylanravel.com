@@ -1,23 +1,14 @@
 /* eslint-disable import/no-anonymous-default-export */
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
+import nextConfig from "eslint-config-next";
+import nextCwvConfig from "eslint-config-next/core-web-vitals";
 import typescriptEslintEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import prettier from "eslint-plugin-prettier";
 import reactUseProps from "eslint-plugin-react-use-props";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
 export default [
-  ...compat.extends("next", "next/core-web-vitals", "prettier"),
+  ...nextConfig,
+  ...nextCwvConfig,
   {
     plugins: {
       prettier,
@@ -44,10 +35,6 @@ export default [
       ],
     },
   },
-  ...compat.extends("plugin:@typescript-eslint/recommended", "prettier").map((config) => ({
-    ...config,
-    files: ["**/*.+(ts|tsx)"],
-  })),
   {
     files: ["**/*.+(ts|tsx)"],
     plugins: {

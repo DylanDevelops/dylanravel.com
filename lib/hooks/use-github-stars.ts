@@ -17,51 +17,48 @@ export const useGitHubStars = (githubUrl?: string, shouldFetch: boolean = false)
       return;
     }
 
-    const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
-    if (!match) {
-      setError("Invalid GitHub URL");
-      return;
-    }
-
-    const [, owner, repo] = match;
-    const cacheKey = `github-stars-${owner}-${repo}`;
-
-    // check cache with 24 hour expiration
-    const cached = localStorage.getItem(cacheKey);
-    if (cached) {
-      try {
-        const { stars: cachedStars, timestamp } = JSON.parse(cached);
-        const isExpired = Date.now() - timestamp > 24 * 60 * 60 * 1000;
-
-        if (!isExpired) {
-          setStars(cachedStars);
-          return;
-        }
-      } catch (e) {
-        // cache broken, keep fetching
+    const fetchStars = async () => {
+      const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
+      if (!match) {
+        setError("Invalid GitHub URL");
+        return;
       }
-    }
 
-    setLoading(true);
-    fetch(`https://api.github.com/repos/${owner}/${repo}`)
-      .then((res) => {
+      const [, owner, repo] = match;
+      const cacheKey = `github-stars-${owner}-${repo}`;
+
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        try {
+          const { stars: cachedStars, timestamp } = JSON.parse(cached);
+          const isExpired = Date.now() - timestamp > 24 * 60 * 60 * 1000;
+          if (!isExpired) {
+            setStars(cachedStars);
+            return;
+          }
+        } catch {
+          // cache broken, keep fetching
+        }
+      }
+
+      try {
+        setLoading(true);
+        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
         if (!res.ok) {
           throw new Error(`Failed to fetch: ${res.status}`);
         }
-        return res.json();
-      })
-      .then((data) => {
+        const data = await res.json();
         const starCount = data.stargazers_count || 0;
         setStars(starCount);
-
         localStorage.setItem(cacheKey, JSON.stringify({ stars: starCount, timestamp: Date.now() }));
+      } catch (err) {
+        setError((err as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
+    fetchStars();
   }, [githubUrl, shouldFetch]);
 
   return { stars, loading, error };

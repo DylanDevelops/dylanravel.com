@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 import { LucideIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 import { SkillProps } from "@/lib/types/skill";
 import { cn } from "@/lib/utils";

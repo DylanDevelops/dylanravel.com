@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { MenuIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 
 import { PortfolioConstants } from "@/lib/branding";
 import { cn } from "@/lib/utils";
@@ -101,7 +101,7 @@ const Navbar = () => {
         showNav ? "translate-y-0" : "-translate-y-[calc(100%+24rem)]"
       )}
     >
-      <div className="frosted-glass-card mx-auto mt-4 hidden max-w-[60rem] flex-row items-center sm:flex">
+      <div className="frosted-glass-card mx-auto mt-4 hidden max-w-240 flex-row items-center sm:flex">
         <Link
           href="/"
           onClick={handleLogoClick}
@@ -139,7 +139,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="mt-4 flex w-full justify-center sm:hidden">
-        <div className="flex w-full max-w-[60rem] flex-row items-start justify-between px-6">
+        <div className="flex w-full max-w-240 flex-row items-start justify-between px-6">
           <Link
             href="/"
             onClick={handleLogoClick}
