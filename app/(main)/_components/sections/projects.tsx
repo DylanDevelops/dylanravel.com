@@ -21,43 +21,62 @@ const Projects = () => {
 
   return (
     <section id="projects" className="flex scroll-mt-10 flex-col gap-2">
-      <h2 className="text-2xl font-bold text-white">Projects</h2>
-      <p className="text-white/80">
-        Learn about {filteredProjects.length} project{filteredProjects.length > 1 && "s"} that I have worked on. Use the
-        buttons below to filter the shown projects.
-      </p>
-      <div className="mb-2 flex flex-wrap gap-2">
-        {allTags.map((tag) => {
-          const FilterIcon = ProjectTagIcons[tag];
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+        className="flex flex-col gap-2"
+      >
+        <motion.h2
+          className="text-2xl font-bold text-white"
+          variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+        >
+          Projects
+        </motion.h2>
+        <motion.p
+          className="text-white/80"
+          variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+        >
+          Learn about {filteredProjects.length} project{filteredProjects.length > 1 && "s"} that I have worked on. Use
+          the buttons below to filter the shown projects.
+        </motion.p>
+        <motion.div
+          className="mb-2 flex flex-wrap gap-2"
+          variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.35 } } }}
+        >
+          {allTags.map((tag) => {
+            const FilterIcon = ProjectTagIcons[tag];
 
-          return (
+            return (
+              <button
+                key={tag}
+                className={cn(
+                  "flex cursor-pointer flex-row items-center gap-2 rounded-full border px-3 py-1 transition-all select-none",
+                  activeFilters.includes(tag)
+                    ? "border-white bg-white text-black"
+                    : "border-white/40 bg-transparent text-white hover:bg-white/10"
+                )}
+                onClick={() =>
+                  setActiveFilters((filters) =>
+                    filters.includes(tag) ? filters.filter((f) => f !== tag) : [...filters, tag]
+                  )
+                }
+              >
+                <FilterIcon className="h-4 w-4" /> {tag}
+              </button>
+            );
+          })}
+          {activeFilters.length > 0 && (
             <button
-              key={tag}
-              className={cn(
-                "flex cursor-pointer flex-row items-center gap-2 rounded-full border px-3 py-1 transition-all select-none",
-                activeFilters.includes(tag)
-                  ? "border-white bg-white text-black"
-                  : "border-white/40 bg-transparent text-white hover:bg-white/10"
-              )}
-              onClick={() =>
-                setActiveFilters((filters) =>
-                  filters.includes(tag) ? filters.filter((f) => f !== tag) : [...filters, tag]
-                )
-              }
+              className="flex cursor-pointer flex-row items-center gap-2 rounded-full border border-white/40 bg-red-600 px-3 py-1 text-white transition-all select-none hover:bg-red-700"
+              onClick={() => setActiveFilters([])}
             >
-              <FilterIcon className="h-4 w-4" /> {tag}
+              <CircleXIcon className="h-4 w-4" /> Clear Filters
             </button>
-          );
-        })}
-        {activeFilters.length > 0 && (
-          <button
-            className="flex cursor-pointer flex-row items-center gap-2 rounded-full border border-white/40 bg-red-600 px-3 py-1 text-white transition-all select-none hover:bg-red-700"
-            onClick={() => setActiveFilters([])}
-          >
-            <CircleXIcon className="h-4 w-4" /> Clear Filters
-          </button>
-        )}
-      </div>
+          )}
+        </motion.div>
+      </motion.div>
       <motion.div layout transition={{ duration: 0.5, type: "spring" }} className="flex flex-col gap-4">
         <Separator />
         <AnimatePresence>

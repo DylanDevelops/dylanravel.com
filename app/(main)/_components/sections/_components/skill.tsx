@@ -18,23 +18,25 @@ const Skill = ({
 
   return (
     <motion.div
-      layout="position"
+      layout
       onClick={() => onClick(skill)}
+      style={{ borderRadius: isSelected ? 16 : 9999 }}
       transition={{
         layout: { type: "spring", stiffness: 400, damping: 35 },
       }}
       className={cn(
-        "cursor-pointer border border-white/40 transition-colors select-none hover:bg-white/10",
-        isSelected ? "w-full rounded-2xl bg-white/5 p-4" : "rounded-full px-2 py-1"
+        "cursor-pointer overflow-hidden border border-white/40 transition-colors select-none hover:bg-white/10",
+        isSelected ? "w-full bg-white/5 p-4" : "px-2 py-1"
       )}
     >
-      <div className="flex items-center gap-4">
+      <motion.div layout="position" className="flex items-center gap-4">
         <AnimatePresence initial={false} mode="popLayout">
           {isSelected && (
             <motion.div
-              className="flex-shrink-0"
+              layout="position"
+              className="shrink-0"
               initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto", transition: { duration: 0.15 } }}
+              animate={{ opacity: 1, width: "auto", transition: { duration: 0.2 } }}
               exit={{ opacity: 0, width: 0, transition: { duration: 0.1 } }}
             >
               {typeof skill.icon === "string" ? (
@@ -46,6 +48,7 @@ const Skill = ({
                   className="h-10 w-10 select-none"
                   unoptimized
                   draggable={false}
+                  loading="eager"
                 />
               ) : (
                 <IconComponent className="h-10 w-10 text-white" />
@@ -54,15 +57,21 @@ const Skill = ({
           )}
         </AnimatePresence>
         <div className="flex min-w-0 flex-1 flex-col justify-center">
-          <h3 className={cn("text-white/80", isSelected ? "text-lg font-bold" : "text-sm")}>{skill.name}</h3>
+          <motion.h3
+            layout="position"
+            className={cn("whitespace-nowrap text-white/80", isSelected ? "text-lg font-bold" : "text-sm")}
+          >
+            {skill.name}
+          </motion.h3>
           <AnimatePresence initial={false} mode="popLayout">
             {isSelected && (
               <motion.p
+                layout="position"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{
                   opacity: 1,
                   height: "auto",
-                  transition: { duration: 0.15, ease: "easeOut" },
+                  transition: { duration: 0.2, ease: "easeOut" },
                 }}
                 exit={{
                   opacity: 0,
@@ -76,7 +85,7 @@ const Skill = ({
             )}
           </AnimatePresence>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 };
