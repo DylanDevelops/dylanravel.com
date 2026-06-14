@@ -59,10 +59,7 @@ const Skill = ({
         <div className="flex min-w-0 flex-1 flex-col justify-center">
           <motion.h3
             layout="position"
-            className={cn(
-              "whitespace-nowrap text-white/80",
-              isSelected ? "text-lg font-bold" : "text-sm"
-            )}
+            className={cn("whitespace-nowrap text-white/80", isSelected ? "text-lg font-bold" : "text-sm")}
           >
             {skill.name}
           </motion.h3>
