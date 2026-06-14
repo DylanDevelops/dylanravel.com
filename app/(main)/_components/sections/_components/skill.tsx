@@ -20,12 +20,13 @@ const Skill = ({
     <motion.div
       layout
       onClick={() => onClick(skill)}
+      style={{ borderRadius: isSelected ? 16 : 9999 }}
       transition={{
         layout: { type: "spring", stiffness: 400, damping: 35 },
       }}
       className={cn(
         "cursor-pointer overflow-hidden border border-white/40 transition-colors select-none hover:bg-white/10",
-        isSelected ? "w-full rounded-2xl bg-white/5 p-4" : "rounded-full px-2 py-1"
+        isSelected ? "w-full bg-white/5 p-4" : "px-2 py-1"
       )}
     >
       <motion.div layout="position" className="flex items-center gap-4">
@@ -33,7 +34,7 @@ const Skill = ({
           {isSelected && (
             <motion.div
               layout="position"
-              className="flex-shrink-0"
+              className="shrink-0"
               initial={{ opacity: 0, width: 0 }}
               animate={{ opacity: 1, width: "auto", transition: { duration: 0.2 } }}
               exit={{ opacity: 0, width: 0, transition: { duration: 0.1 } }}
@@ -47,6 +48,7 @@ const Skill = ({
                   className="h-10 w-10 select-none"
                   unoptimized
                   draggable={false}
+                  loading="eager"
                 />
               ) : (
                 <IconComponent className="h-10 w-10 text-white" />
