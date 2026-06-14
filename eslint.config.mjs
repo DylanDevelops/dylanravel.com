@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
-import nextConfig from "eslint-config-next";
-import nextCwvConfig from "eslint-config-next/core-web-vitals";
 import typescriptEslintEslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import nextConfig from "eslint-config-next";
+import nextCwvConfig from "eslint-config-next/core-web-vitals";
 import prettier from "eslint-plugin-prettier";
 import reactUseProps from "eslint-plugin-react-use-props";
 
