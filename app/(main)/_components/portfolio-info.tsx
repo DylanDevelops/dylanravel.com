@@ -11,7 +11,6 @@ const PortfolioInfo = () => {
       <div className="frosted-glass-button rounded-4xl">
         <Image
           src={PortfolioConstants.Headshots[0]}
-          unoptimized
           width={192}
           height={192}
           priority

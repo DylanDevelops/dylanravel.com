@@ -34,7 +34,7 @@ const FloatingShapes = () => (
       <motion.div
         key={shape.id}
         className={`absolute rounded-full ${shape.color} ${shape.size} ${shape.blur} opacity-40`}
-        style={{ left: `${shape.initialX}%`, top: `${shape.initialY}%` }}
+        style={{ left: `${shape.initialX}%`, top: `${shape.initialY}%`, willChange: "transform" }}
         animate={{ x: shape.moveX, y: shape.moveY, scale: [1, 1.1, 0.95, 1.05, 1] }}
         transition={{ duration: shape.duration, repeat: Infinity, ease: "easeInOut", delay: shape.delay }}
       />

@@ -27,9 +27,9 @@ const Project = ({
       <div className="flex flex-col gap-4 pb-4 text-white/80 sm:flex-row">
         <Image
           src={thumbnailUrl}
-          unoptimized
           width={1920}
           height={1080}
+          loading="lazy"
           alt={`The thumbnail for a project called "${title}"`}
           className="aspect-16/9 h-full w-full rounded-lg sm:w-48"
         />

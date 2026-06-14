@@ -13,18 +13,18 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
   const navRef = useRef<HTMLDivElement>(null);
-  const [isScrollingAfterClick, setIsScrollingAfterClick] = useState(false);
+  const isScrollingAfterClick = useRef(false);
   const scrollEndTimeout = useRef<NodeJS.Timeout | null>(null);
 
   const handleLinkClick = () => {
     setShowNav(false);
-    setIsScrollingAfterClick(true);
+    isScrollingAfterClick.current = true;
   };
 
   const handleMobileLinkClick = () => {
     setMobileMenuOpen(false);
     setShowNav(false);
-    setIsScrollingAfterClick(true);
+    isScrollingAfterClick.current = true;
   };
 
   const handleLogoClick = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY <= 0) {
         setShowNav(true);
-        setIsScrollingAfterClick(false);
+        isScrollingAfterClick.current = false;
         if (scrollEndTimeout.current) {
           clearTimeout(scrollEndTimeout.current);
         }
@@ -50,10 +50,10 @@ const Navbar = () => {
       }
 
       scrollEndTimeout.current = setTimeout(() => {
-        setIsScrollingAfterClick(false);
+        isScrollingAfterClick.current = false;
       }, 150);
 
-      if (isScrollingAfterClick) {
+      if (isScrollingAfterClick.current) {
         lastScrollY.current = currentScrollY;
         return;
       }
@@ -83,7 +83,7 @@ const Navbar = () => {
         clearTimeout(scrollEndTimeout.current);
       }
     };
-  }, [isScrollingAfterClick]);
+  }, []);
 
   const linkVariants = {
     hidden: { opacity: 0, y: 20 },

@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 import { GitHubURL, InstagramURL, ItchIoURL, KoFiURL, LinkedInURL, ORCIDUrl } from "./lib/links";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async redirects() {
     return [
       {

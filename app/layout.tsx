@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 
 import "./globals.css";
 
@@ -6,6 +7,13 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { PortfolioConstants } from "@/lib/branding";
 import { DomainURL } from "@/lib/links";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(DomainURL),
@@ -38,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={poppins.variable}>
       <head />
       <body className="overflow-x-clip bg-[#202020]">
         {children}
