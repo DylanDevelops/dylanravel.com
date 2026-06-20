@@ -14,7 +14,7 @@ type Chapter = {
 };
 
 const About = () => {
-  const [openChapter, setOpenChapter] = useState<string | null>(null);
+  const [openChapter, setOpenChapter] = useState<string | null>("Background");
 
   const chapters: Chapter[] = [
     {
