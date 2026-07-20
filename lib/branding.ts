@@ -11,7 +11,7 @@ export const PortfolioConstants = {
   get FullName() {
     return `${this.FirstName} ${this.LastName}`;
   },
-  Headshots: ["/images/pfp.webp", "/images/pfp_rounded.webp", "/images/pfp2", "/images/pfp2_rounded"],
+  Headshots: ["/images/pfp.webp", "/images/pfp_rounded.webp"],
   Email: "hello@dylanravel.com",
   Logo: CodeXmlIcon,
   CopyrightYear: new Date().getFullYear(),
