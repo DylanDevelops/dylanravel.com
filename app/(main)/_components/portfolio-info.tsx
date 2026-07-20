@@ -11,8 +11,9 @@ const PortfolioInfo = () => {
       <div className="frosted-glass-button rounded-4xl">
         <Image
           src={PortfolioConstants.Headshots[0]}
-          width={192}
-          height={192}
+          width={512}
+          height={512}
+          quality={95}
           priority
           alt={`A picture of ${PortfolioConstants.FullName}`}
           className="h-48 w-48 rounded-4xl"
