@@ -29,6 +29,14 @@ export const projectList: ProjectProps[] = [
     websiteLink: "https://pantherguessr.com",
   },
   {
+    title: "BOMB CO.",
+    date: "2026",
+    description:
+      "Made for the GMTK 2026 Game Jam under the theme 'countdown,' BOMB CO. is a frantic office sim where you defuse ticking bombs at your desk, unscrewing panels, cutting wires, and matching memory sequences. All while phones, emails, and coworkers fight for your attention. Built in Unity by a team of seven (five programmers, one artist, one musician) with original art and an original soundtrack.",
+    tags: [ProjectTag.Game, ProjectTag.Team],
+    itchLink: "https://moontyzoo.itch.io/bombco",
+  },
+  {
     title: "PantherHacks 2026",
     date: "2025 - 2026",
     description:
